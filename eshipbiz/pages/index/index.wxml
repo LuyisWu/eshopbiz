@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class='container'>
+  <view class='banner-wrapper relative' style='width: 100%'>
+    <swiper interval='5000' indicator-active-color='#ffff' indicator-color='#1888c8' indicator-dots='true' circular="true" circular='true'>
+    <swiper-item>
+      <view class='relative'>
+        <image src='/images/banner1.png' style='width: 100%'></image>
+      </view>
+    </swiper-item>
+    </swiper>
+    <view class='index-search absolute'>
+      <input class='index-search-input' type='text' bindtap='searchNav' placeholder='搜索您想要的企业名称、产品等'></input>
+      <icon type='search' size="14" class='index-search-icon'></icon>
+    </view>
+  </view>
+  <view class='index-menu-wrapper'>
+    <view class='index-menu'>
+      <block wx:for="{{menuList}}" wx:key="id" wx:for-item="menuItem">
+        <view class='index-menu-item'>
+          <view bindtap='menuNav' data-url="{{menuList.url}}">
+            <image src="{{menuItem.path}}" class='index-menu-item-image'></image>
+          </view> 
+          <text class='index-menu-item-title'>{{menuItem.name}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class='index-inquery'>
+    <view class=''></view>
+    <view>{{inquery.title}}</view>
+  </view>
+</view>

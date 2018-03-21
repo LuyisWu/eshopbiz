@@ -1,0 +1,32 @@
+/* pages/info/info.wxss */
+.info-page{
+  width: 100%;
+  margin: 0 20rpx;
+}
+.info-page{
+  width: 100%;
+}
+.info-item{
+  margin: 0 20rpx;
+}
+.info-nav{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  line-height: 90rpx;
+  height: 90rpx;
+  border-bottom: 1rpx solid #dcdcdc;
+}
+.info-nav-left{
+  justify-content: flex-start;
+  padding-left: 20rpx;
+  font-size: 28rpx;
+  color: #000;
+}
+.info-nav-right{
+  justify-content: flex-end;
+  padding-right: 20rpx;
+  font-size: 28rpx;
+  color: #505050;
+}

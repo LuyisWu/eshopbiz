@@ -1,0 +1,21 @@
+<!--pages/sign/sign.wxml-->
+<view class='container'>
+  <view class='sign-form'>
+    <form id='signForm'>
+      <view class='sign-input-wrapper'>
+        <text class='icon-logo sign-icon'></text>
+        <input type='text' class='sign-input' name="phone" placeholder='请输入手机号' bindinput='phoneInput'></input>
+      </view>
+      <view class='sign-input-wrapper'>
+        <text class='icon-logo sign-icon'></text>
+        <input type='text' class='sign-input' name="phoneCode" maxlength="6" placeholder='请输入验证码' bindinput='phoneCodeInput'></input>
+        <button class='' disabled='{{disabled}}' bindtab="countDown" disabled='{{disabled}}' data-time="{{time}}" data-last="{{last}}">{{text}}</button>
+      </view>
+      <view class='sign-input-wrapper'>
+        <text class='icon-logo sign-icon'></text>
+        <input type='password' class='sign-input' name="password" placeholder='请输入您的密码' bindinput='passwordInput'></input>
+      </view>
+      <button class='sign-button' bindtap='signAction' disabled='{{disabled}}'>登  录</button>
+    </form>
+  </view>
+</view>

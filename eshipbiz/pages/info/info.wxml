@@ -1,0 +1,42 @@
+<!--pages/info/info.wxml-->
+<view class='container'>
+  <view class='info-page'>
+    <view class='info-item'>
+      <navigator class='info-nav' url='/pages/index/index' open-type='redirect'>
+        <label class='info-nav-left'>头像</label>
+        <text class='info-nav-right'>12321<text class='icon'>></text></text>
+      </navigator>
+    </view>
+    <view class='info-item'>
+      <navigator class='info-nav' url='/pages/index/index' open-type='redirect'>
+        <label class='info-nav-left'>姓名称呼</label>
+        <text class='info-nav-right'>12321<text class='icon'>></text></text>
+      </navigator>
+    </view>
+
+    <view class='info-item'>
+      <navigator class='info-nav' url='/pages/index/index' open-type='redirect'>
+        <label class='info-nav-left'>性别</label>
+        <text class='info-nav-right'>12321<text class='icon'>></text></text>
+      </navigator>
+    </view>
+    <view class='info-item'>
+      <navigator class='info-nav' url='/pages/index/index' open-type='redirect'>
+        <label class='info-nav-left'>部门</label>
+        <text class='info-nav-right'>12321<text class='icon'>></text></text>
+      </navigator>
+    </view>
+    <view class='info-item'>
+      <navigator class='info-nav' url='/pages/index/index' open-type='redirect'>
+        <label class='info-nav-left'>职位</label>
+        <text class='info-nav-right'>12321<text class='icon'>></text></text>
+      </navigator>
+    </view>
+    <view class='info-item'>
+      <navigator class='info-nav' url='/pages/index/index' open-type='redirect'>
+        <label class='info-nav-left'>业务电话</label>
+        <text class='info-nav-right'>12321<text class='icon'>></text></text>
+      </navigator>
+    </view>
+  </view>
+</view>

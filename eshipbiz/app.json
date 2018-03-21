@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/business/business",
+    "pages/supplier/supplier",
+    "pages/message/message",
+    "pages/account/account",
+    "pages/password/password",
+    "pages/login/login",
+    "pages/sign/sign",
+    "pages/forget/forget",
+    "pages/mysupplier/mysupplier",
+    "pages/cert/cert",
+    "pages/eshop/eshop",
+    "pages/info/info",
+    "pages/mybusiness/mybusiness",
+    "components/tbutton/tbutton"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTitleText": "海舶士",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7d7d7d",
+    "selectedColor": "#fabf13",
+    "backgroundColor": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/tabbar/tabbar-1.png",
+        "selectedIconPath": "/images/tabbar/tabbar-1-selected.png"
+      },
+      {
+        "pagePath": "pages/business/business",
+        "text": "商机库",
+        "iconPath": "/images/tabbar/tabbar-2.png",
+        "selectedIconPath": "/images/tabbar/tabbar-2-selected.png"
+      },
+      {
+        "pagePath": "pages/supplier/supplier",
+        "text": "供应商",
+        "iconPath": "/images/tabbar/tabbar-3.png",
+        "selectedIconPath": "/images/tabbar/tabbar-3-selected.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "/images/tabbar/tabbar-4.png",
+        "selectedIconPath": "/images/tabbar/tabbar-4-selected.png"
+      },
+      {
+        "pagePath": "pages/account/account",
+        "text": "我的",
+        "iconPath": "/images/tabbar/tabbar-5.png",
+        "selectedIconPath": "/images/tabbar/tabbar-5-selected.png"
+      }
+    ]
+  }
+}

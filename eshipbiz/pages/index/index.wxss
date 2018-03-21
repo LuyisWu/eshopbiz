@@ -1,0 +1,58 @@
+/**index.wxss**/
+.banner{
+  width: 100%;
+  text-align: center;
+}
+.index-search{
+  top: 40rpx;
+  width: 100%;
+}
+.index-search-input{
+  border: 1px solid #dcdcdc;
+  border-radius: 40rpx;
+  top: 40rpx;
+  height: 60rpx;
+  width: 80%;
+  margin: 0 auto;
+  padding-left: 80rpx;
+  background: #fff;
+  font-size: 30rpx;
+  line-height: 40rpx;
+  z-index: 11;
+}
+.index-search-icon{
+  position: absolute;
+  top: 18rpx;
+  left: 50rpx;
+  z-index: 12;
+}
+.index-menu-wrapper{
+  margin: 0 10rpx;
+}
+.index-menu{
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 40rpx;
+}
+.index-menu-item{
+  padding-top: 40rpx;
+  width: 20%;
+  text-align: center;
+}
+.index-menu-item-image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.index-menu-item-title{
+  font-size: 24rpx;
+  line-height: 1;
+}
+.index-inquery{
+  background: #f0f0f0;
+  width: 100%;
+}
+.index-tips-title{
+
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "海舶士船舶服务",
+  "usingComponents": {
+    "dialog": "/components/dialog/dialog"
+  }
+}

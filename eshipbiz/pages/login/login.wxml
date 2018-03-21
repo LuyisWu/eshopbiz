@@ -1,0 +1,15 @@
+<!--pages/login/login.wxml-->
+<view class='container'>
+  <view class='text-center'><image src="/images/logo.png" class='top-logo'></image></view>
+  <view class='login-form'>
+    <form id='loginForm'>
+      <input type='text' class='login-input' name="userCode" placeholder='请输入手机号' bindinput='userCodeInput'></input>
+      <input type='password' class='login-input' name="password" placeholder='请输入您的密码' bindinput='passwordInput'></input>
+      <button class='login-button' bindtap='loginAction' disabled='{{disabled}}'>登  录</button>
+    </form>
+  </view>
+  <view class='login-nav-wrapper'>
+    <navigator url="/pages/forget/forget" open-type="redirect" class='login-nav login-left'>忘记密码？</navigator>
+    <navigator url="/pages/sign/sign" open-type="redirect" class='login-nav login-right'>注册账户</navigator>
+  </view>
+</view>

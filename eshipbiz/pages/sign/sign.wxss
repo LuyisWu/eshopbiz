@@ -1,0 +1,31 @@
+/* pages/sign/sign.wxss */
+.sign-form{
+  width: 100%;
+}
+.sign-input{
+  border-bottom: 1px solid #dcdcdc;
+  line-height: 100rpx;
+  height: 100rpx;
+  padding-left: 60rpx;
+  margin: 0 20rpx;
+  display: block;
+  font-size: 28rpx;
+}
+.sign-input::focus{
+  border-color: #fabf13;
+}
+.sign-button{
+  margin: 40rpx 20rpx 0;
+  background: #fabf1b;
+  border-radius: 4rpx;
+  font-size: 32rpx;
+}
+.sign-input-wrapper{
+  width: 100%;
+  position: relative;
+}
+.sign-icon{
+  position: absolute;
+  left: 20rpx;
+  top: 32rpx;
+}

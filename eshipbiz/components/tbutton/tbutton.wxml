@@ -1,0 +1,2 @@
+<!--components/tbutton/tbutton.wxml-->
+<button class='{{class}}' disabled='{{disabled}}' bindtab="untilTime" data-time="{{time}}"data-last="{{last}}">{{text}}</button>
