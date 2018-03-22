@@ -1,8 +1,7 @@
 // pages/account/account.js
-const app = getApp()
-const account = wx.getStorageSync("account") || "";
-const enterprise = wx.getStorageSync("enterprise") || "";
-const enterpriseExhSign = wx.getStorageSync("enterpriseExhSign") || "";
+var app = getApp()
+var account = wx.getStorageSync("account") || app.globalData.account;
+var enterprise = wx.getStorageSync("enterprise") || app.globalData.enterprise;
 Page({
 
   /**
@@ -10,62 +9,62 @@ Page({
    */
   data: {
     phone:"",
-    headImg:"",
+    headImg: "/images/menu/menu-1.png",
     enterpriseName:"",
+    loginStatus:false,
     actionList:[{
-        icon:"icon-logo",
+        icon:"icon-Business-opportunity",
         iconColor:"#7bb0ff",
         name:"我的商机",
         path:"/pages/mybusiness/mybusiness",
-        type:"redirect"
+        type:"navigate"
     }, {
-      icon: "icon-logo",
+      icon: "icon-cert",
       iconColor: "#5ee09b",
       name: "实名认证",
       path: "/pages/cert/cert",
-      type: "redirect"
+      type: "navigate"
     }, {
-      icon: "icon-logo",
+      icon: "icon-The-exhibition-hall",
       iconColor: "#fabf13",
       name: "我的展厅",
-      path: "/pages/eshop/eshop",
-      type: "redirect"
+      path: "/pages/eshop/eshop", 
+      type: "navigate"
     }, {
-      icon: "icon-logo",
+      icon: "icon-Personal-information",
       iconColor: "#fabf13",
       name: "个人信息",
       path: "/pages/info/info",
-      type: "redirect"
+      type: "navigate"
     },{
-      icon: "icon-logo",
+      icon: "icon-Supplier",
       iconColor: "#7bb0ff",
       name: "我的供应商",
       path: "/pages/mysupplier/mysupplier",
-      type: "redirect"
+      type: "navigate"
     }]
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    if (!account){
-      wx.redirectTo({
-        url: '/pages/login/login',
-      })
-    }else{
+  onShow: function(){
+    if (account!=null && account !=""){
       this.setData({
-        phone: account.phone,
+        loginStatus: app.globalData.loginStatus,
+        phone: account.phone || "",
         headImg: account.headImg || "/images/menu/menu-1.png",
-        enterpriseName: enterprise.enterpriseName
+        enterpriseName: enterprise.enterpriseName || ""
       })
     }
   },
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    
+  loginCheckNav:function(e){
+    var url = e.target.dataset.url;
+    if(app.globalData.loginStatus ==true){
+      wx.navigateTo({
+        url: url
+      })
+    }else{
+      wx.navigateTo({
+        url: "/pages/login/login"
+      })
+    }
   },
   navToInfo: function(){
     wx.redirectTo({
@@ -84,11 +83,16 @@ Page({
           app.globalData.account ="";
           app.globalData.enterprise = "";
           app.globalData.enterpriseExhSign = "";
+          app.globalData.loginStatus = false;
           wx.showToast({
             title: '退出成功'
           })
-          wx.redirectTo({
-            url: '/pages/login/login'
+          wx.reLaunch({
+            url: '/pages/account/account',
+          })
+        }else{
+          wx.showToast({
+            title: res.data.msg
           })
         }
       }

@@ -24,332 +24,85 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.icon-Authenticationo:before {
-  content: "\1f5cc";
-}
-.icon-account-management:before {
+.icon-delete:before {
   content: "\e900";
 }
-.icon-Authentication-state:before {
-  content: "\e901";
-}
-.icon-logo:before {
-  content: "\e907";
-}
-.icon-homepage:before {
-  content: "\e96d";
-}
-.icon-Manufacture-supplier:before {
-  content: "\e969";
-}
-.icon-Ship-service-provider:before {
-  content: "\e96a";
-}
-.icon-Shipowner-and-ship-management-company:before {
-  content: "\e96b";
-}
-.icon-The-shipyard:before {
-  content: "\e96c";
-}
-.icon-account-management2 .path1:before {
-  content: "\e902";
-  color: rgb(221, 220, 220);
-}
-.icon-account-management2 .path2:before {
-  content: "\e903";
-  margin-left: -1em;
-  color: rgb(221, 220, 220);
-}
-.icon-account-management2 .path3:before {
-  content: "\e904";
-  margin-left: -1em;
-  color: rgb(221, 220, 220);
-}
-.icon-account-management2 .path4:before {
-  content: "\e905";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
-.icon-account-management2 .path5:before {
-  content: "\e908";
-  margin-left: -1em;
-  color: rgb(221, 220, 220);
-}
-.icon-account-management2 .path6:before {
-  content: "\e909";
-  margin-left: -1em;
-  color: rgb(221, 220, 220);
-}
-.icon-Custom-classification:before {
-  content: "\e906";
-}
-.icon-Hamburger:before {
-  content: "\e90a";
-}
-.icon-purchasing-management:before {
-  content: "\e90b";
-}
-.icon-Issue-an-inquiry-sheet:before {
-  content: "\e90c";
-}
-.icon-Quotation:before {
-  content: "\e90d";
-}
-.icon-Purchase-list:before {
-  content: "\e90e";
-}
-.icon-Collection-folder:before {
-  content: "\e90f";
-}
-.icon-drafts:before {
-  content: "\e910";
-}
-.icon-Sales-management:before {
-  content: "\e911";
-}
-.icon-Business-opportunity-Library:before {
-  content: "\e912";
-}
-.icon-Quotation-management:before {
-  content: "\e913";
-}
-.icon-Purchasing-portal:before {
-  content: "\e914";
-}
-.icon-customer-management:before {
-  content: "\e915";
-}
-.icon-Purchasers:before {
-  content: "\e916";
-}
-.icon-Supplier:before {
-  content: "\e917";
-}
-.icon-product-management:before {
-  content: "\e918";
-}
-.icon-Release-products:before {
+.icon-lock:before {
   content: "\e919";
+
 }
-.icon-product-management2:before {
+.icon-increase:before {
   content: "\e91a";
 }
-.icon-Batch-operation:before {
-  content: "\e91b";
-}
-.icon-Exhibition-hall-management:before {
-  content: "\e91c";
-}
-.icon-Decoration-Exhibition-Hall:before {
-  content: "\e91d";
-}
-.icon-security-setting:before {
-  content: "\e91e";
-}
-.icon-Personal-information:before {
-  content: "\e91f";
-}
-.icon-Enterprise-information:before {
-  content: "\e920";
-}
-.icon-Real-name-authentication:before {
-  content: "\e921";
-}
-.icon-Subaccount-management:before {
-  content: "\e922";
-}
-.icon-Customer-service:before {
-  content: "\e928";
-}
-.icon-Conversation:before {
-  content: "\e929";
-}
-.icon-search:before {
-  content: "\e92a";
-}
-.icon-Unfold-one:before {
-  content: "\e92b";
-}
-.icon-Date:before {
-  content: "\e92c";
-}
-.icon-Annotation:before {
-  content: "\e92d";
-}
-.icon-Do-not-display:before {
-  content: "\e92e";
-}
-.icon-Delete:before {
-  content: "\e92f";
-}
-.icon-Inquiry-management:before {
-  content: "\e930";
-}
-.icon-Finished:before {
-  content: "\e931";
-}
-.icon-Have-done-a-deal:before {
-  content: "\e932";
-}
-.icon-Unpublished:before {
-  content: "\e933";
-}
-.icon-account:before {
-  content: "\e934";
-}
-.icon-Password:before {
-  content: "\e935";
-}
-.icon-Erroneous-reminding:before {
-  content: "\e936";
-}
-.icon-Report:before {
-  content: "\e937";
-}
-.icon-delete:before {
-  content: "\e938";
-}
-.icon-picture:before {
-  content: "\e939";
-}
-.icon-Brand-new:before {
-  content: "\e93a";
-}
-.icon-Refurbished:before {
-  content: "\e93b";
-}
-.icon-second-hand:before {
-  content: "\e93c";
-}
-.icon-Collection:before {
-  content: "\e93d";
-}
-.icon-Entering-the-purchasing-area:before {
-  content: "\e93e";
-}
-.icon-Audit:before {
-  content: "\e93f";
-}
-.icon-Message-One:before {
-  content: "\e940";
-}
-.icon-Message-Two:before {
-  content: "\e941";
-}
-.icon-More:before {
-  content: "\e942";
-}
 .icon-Authentication:before {
-  content: "\e943";
+  content: "\e901";
 }
-.icon-Location:before {
-  content: "\e944";
-}
-.icon-Telephone:before {
-  content: "\e945";
-}
-.icon-phone:before {
-  content: "\e946";
-}
-.icon-User-name:before {
-  content: "\e947";
-}
-.icon-List-mode:before {
-  content: "\e948";
-}
-.icon-Window-mode:before {
-  content: "\e949";
-}
-.icon-Unfold-Two:before {
-  content: "\e94a";
-}
-.icon-Stop:before {
-  content: "\e94b";
-}
-.icon-right-arrow:before {
-  content: "\e94c";
-}
-.icon-See:before {
-  content: "\e94d";
-}
-.icon-share:before {
-  content: "\e94e";
+.icon-hide:before {
+  content: "\e902";
 }
 .icon-Close:before {
-  content: "\e94f";
+  content: "\e903";
 }
-.icon-QQ-Zone:before {
-  content: "\e950";
+.icon-account:before {
+  content: "\e904";
 }
-.icon-WeChat:before {
-  content: "\e951";
-}
-.icon-micro-blog:before {
-  content: "\e952";
-}
-.icon-Other-information:before {
-  content: "\e953";
-}
-.icon-up-arrow:before {
-  content: "\e954";
-}
-.icon-download:before {
-  content: "\e955";
+.icon-Password:before {
+  content: "\e905";
 }
 .icon-Verification-Code:before {
-  content: "\e956";
-}
-.icon-Top:before {
-  content: "\e957";
-}
-.icon-Move:before {
-  content: "\e958";
-}
-.icon-Down:before {
-  content: "\e959";
-}
-.icon-The-bottom:before {
-  content: "\e95a";
-}
-.icon-uniE95B:before {
-  content: "\e95b";
-}
-.icon-uniE95C:before {
-  content: "\e95c";
-}
-.icon-International-Information:before {
-  content: "\e95d";
-}
-.icon-edit:before {
-  content: "\e95e";
-}
-.icon-Fax:before {
-  content: "\e95f";
-}
-.icon-Through-authentication:before {
-  content: "\e960";
-}
-.icon-like:before {
-  content: "\e961";
-}
-.icon-lower:before {
-  content: "\e962";
-}
-.icon-upper:before {
-  content: "\e963";
+  content: "\e906";
 }
 .icon-display:before {
-  content: "\e964";
+  content: "\e907";
 }
-.icon-Picture-list:before {
-  content: "\e965";
+.icon-Manufacture:before {
+  content: "\e908";
 }
-.icon-backward:before {
-  content: "\e966";
+.icon-Trade:before {
+  content: "\e909";
 }
-.icon-list:before {
-  content: "\e967";
+.icon-service:before {
+  content: "\e90a";
 }
-.icon-forward:before {
-  content: "\e968";
+.icon-agent:before {
+  content: "\e90b";
+}
+.icon-Location:before {
+  content: "\e90c";
+}
+.icon-share:before {
+  content: "\e90d";
+}
+.icon-Personal-information:before {
+  content: "\e90e";
+}
+.icon-Arrow:before {
+  content: "\e90f";
+}
+.icon-Other:before {
+  content: "\e910";
+}
+.icon-co-option:before {
+  content: "\e911";
+}
+.icon-cert:before {
+  content: "\e912";
+}
+.icon-search:before {
+  content: "\e913";
+}
+.icon-Sign-out:before {
+  content: "\e914";
+}
+.icon-Supplier:before {
+  content: "\e915";
+}
+.icon-Business-opportunity:before {
+  content: "\e916";
+}
+.icon-The-exhibition-hall:before {
+  content: "\e917";
+}
+.icon-drop-down:before {
+  content: "\e918";
 }

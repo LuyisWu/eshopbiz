@@ -1,25 +1,30 @@
 <!--pages/account/account.wxml-->
 <view class='container'>
   <view class='account-bg' style='background: url(/images/banner1.png) center center no-repeat;'>
-    <view class='account-bg-content' bindtap='navToInfo'>
+    <view class='account-bg-content'>
       <image src='{{headImg}}' class='head-img'></image>
-      <view class='account-sub-content'>
+      <view class='account-sub-content' wx:if="{{loginStatus}}">
         <view class='account-phone'>{{phone}}</view>
         <view class='account-name'>{{enterpriseName}}</view>
+      </view>
+      <view class='account-sub-wrapper' wx:else>
+        <navigator url="/pages/login/login" class='account-login' open-type='navigate'>登录</navigator>
+        <text class='account-line'></text>
+        <navigator url="/pages/sign/sign" class='account-sign' open-type='navigate'>注册</navigator>
       </view>
     </view>
   </view>
   <view class='account-content'>
-    <block wx:for="{{actionList}}">
+    <block wx:for="{{actionList}}" wx:key="">
       <view class='action-item'>
-        <navigator url="{{item.path}}" open-type="{{item.type}}" class='action-link'>
+        <text data-url="{{item.path}}" class='action-link' bindtap='loginCheckNav'>
         <text class='action-link-title'><text class='action-link-icon {{item.icon}}' style='color:{{item.iconColor}}'></text>{{item.name}}</text>
         <text class='action-link-right icon-forward'></text>
-        </navigator>
+        </text>
       </view>
       </block>
-      <view class='action-bottom-item' bindtap='loginOut'>
-        <text class='action-bottom-icon icon-logo'></text>
+      <view class='action-bottom-item' bindtap='loginOut' wx:if="{{loginStatus}}">
+        <text class='action-bottom-icon icon-Sign-out'></text>
         <text class='action-bottom-title'>退出登录</text>
       </view>
   </view>

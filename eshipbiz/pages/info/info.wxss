@@ -1,13 +1,26 @@
 /* pages/info/info.wxss */
+page{
+  background: #f5f5f5;
+}
 .info-page{
   width: 100%;
-  margin: 0 20rpx;
+  margin: 20rpx 20rpx 0;
 }
 .info-page{
   width: 100%;
 }
 .info-item{
-  margin: 0 20rpx;
+  padding: 0 20rpx;
+  background: #fff;
+}
+.info-img-nav{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  line-height: 150rpx;
+  height: 150rpx;
+  border-bottom: 1rpx solid #dcdcdc;
 }
 .info-nav{
   width: 100%;
@@ -17,6 +30,14 @@
   line-height: 90rpx;
   height: 90rpx;
   border-bottom: 1rpx solid #dcdcdc;
+}
+.info-nav-last{
+   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  line-height: 90rpx;
+  height: 90rpx;
 }
 .info-nav-left{
   justify-content: flex-start;
@@ -29,4 +50,28 @@
   padding-right: 20rpx;
   font-size: 28rpx;
   color: #505050;
+}
+.info-logo{
+  width: 100rpx;
+  height: 100rpx;
+  padding-top: 25rpx;
+}
+.info-icon-right{
+  line-height: 150rpx;
+  font-size: 28rpx;
+  vertical-align: top;
+  padding-left: 20rpx;
+  color: #505050;
+}
+.info-text-icon{
+  line-height: 90rpx;
+  font-size: 28rpx;
+  vertical-align: middle;
+  padding-left: 20rpx;
+  color: #505050;
+}
+.info-text{
+  line-height: 90rpx;
+  font-size: 28rpx;
+  color: 505050;
 }

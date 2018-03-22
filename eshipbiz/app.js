@@ -44,7 +44,7 @@ App({
         }
       }
     });
-    if (account){
+    if (account !=""){
       wx.request({
         url: this.globalData.host+'/rest/lp/account/getUserInfo',
         data: {
@@ -56,12 +56,14 @@ App({
           this.globalData.account = result.account;
           this.globalData.enterprise = result.enterprise;
           this.globalData.enterpriseExhSign = result.enterpriseExhSign;
+          this.globalData.loginStatus = true;
         }
       })
     }
   },
   globalData: {
     userInfo: null,
+    loginStatus:false,
     account:null,
     enterprise:null,
     enterpriseExhSign:null,

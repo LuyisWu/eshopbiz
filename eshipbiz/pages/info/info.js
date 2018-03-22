@@ -1,11 +1,17 @@
 // pages/info/info.js
+var app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    headImg:"",
+    name:"",
+    sex:"",
+    partment:"",
+    job:"",
+    phone:""
   },
 
   /**
@@ -26,6 +32,13 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+      this.setData({
+        headImg: app.globalData.headImg ||"/images/menu/menu-1.png",
+        name: "",
+        sex: 0,
+        partment: "",
+        job: "",
+        phone: ""
+      });
   },
 })

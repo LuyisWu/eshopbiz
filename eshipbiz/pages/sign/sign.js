@@ -107,10 +107,10 @@ Page({
           })
         } else {
           const msg = res.data.msg || "";
-          wx.showToast({
-            title: msg,
-            icon: "none"
-          })
+            wx.showToast({
+              title: msg,
+              icon: "none"
+            })
         }
       }
     })

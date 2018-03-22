@@ -2,40 +2,45 @@
 <view class='container'>
   <view class='info-page'>
     <view class='info-item'>
-      <navigator class='info-nav' url='/pages/index/index' open-type='redirect'>
+      <navigator class='info-img-nav' url='/pages/editinfo/logo/logo' open-type='navigate'>
         <label class='info-nav-left'>头像</label>
-        <text class='info-nav-right'>12321<text class='icon'>></text></text>
+        <view class='info-nav-right'><image src="{{headImg}}" class='info-logo'></image><text class='icon-Arrow info-icon-right'></text></view>
       </navigator>
     </view>
     <view class='info-item'>
-      <navigator class='info-nav' url='/pages/index/index' open-type='redirect'>
+      <navigator class='info-nav' url='/pages/editinfo/name/name' open-type='navigate'>
         <label class='info-nav-left'>姓名称呼</label>
-        <text class='info-nav-right'>12321<text class='icon'>></text></text>
+        <view class='info-nav-right'><text class='info-text'>{{name}}</text><text class='icon-Arrow info-text-icon'></text></view>
       </navigator>
     </view>
 
     <view class='info-item'>
-      <navigator class='info-nav' url='/pages/index/index' open-type='redirect'>
+      <navigator class='info-nav' url='/pages/editinfo/sexuality/sexuality' open-type='navigate'>
         <label class='info-nav-left'>性别</label>
-        <text class='info-nav-right'>12321<text class='icon'>></text></text>
+        <view wx:if="{{sex == 0}}" class='info-nav-right'>
+            <text class='info-text'>男</text><text class='icon-Arrow info-text-icon'></text>
+        </view>
+        <view wx:if="{{sex == 1}}" class='info-nav-right'>
+          <text class='info-text'>女</text><text class='icon-Arrow info-text-icon'></text>
+        </view>
       </navigator>
     </view>
     <view class='info-item'>
-      <navigator class='info-nav' url='/pages/index/index' open-type='redirect'>
+      <navigator class='info-nav' url='/pages/editinfo/partment/partment' open-type='navigate'>
         <label class='info-nav-left'>部门</label>
-        <text class='info-nav-right'>12321<text class='icon'>></text></text>
+        <view class='info-nav-right'><text class='info-text'>{{partment}}</text><text class='icon-Arrow info-text-icon'></text></view>
       </navigator>
     </view>
     <view class='info-item'>
-      <navigator class='info-nav' url='/pages/index/index' open-type='redirect'>
+      <navigator class='info-nav' url='/pages/editinfo/job/job' open-type='navigate'>
         <label class='info-nav-left'>职位</label>
-        <text class='info-nav-right'>12321<text class='icon'>></text></text>
+        <view class='info-nav-right'><text class='info-text'>{{job}}</text><text class='icon-Arrow info-text-icon'></text></view>
       </navigator>
     </view>
     <view class='info-item'>
-      <navigator class='info-nav' url='/pages/index/index' open-type='redirect'>
+      <navigator class='info-nav-last' url='/pages/editinfo/phone/phone' open-type='navigate'>
         <label class='info-nav-left'>业务电话</label>
-        <text class='info-nav-right'>12321<text class='icon'>></text></text>
+        <view class='info-nav-right'><text class='info-text'>{{phone}}</text><text class='icon-Arrow info-text-icon'></text></view>
       </navigator>
     </view>
   </view>
