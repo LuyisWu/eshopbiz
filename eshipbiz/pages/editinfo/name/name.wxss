@@ -1,0 +1,4 @@
+/* pages/editinfo/name/name.wxss */
+page{
+  background: #f5f5f5;
+}

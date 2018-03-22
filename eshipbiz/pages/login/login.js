@@ -1,8 +1,5 @@
 // pages/login/login.js
 var app = getApp()
-var account = wx.getStorageSync("account") || "";
-var enterprise = wx.getStorageSync("enterprise") || "";
-var enterpriseExhSign = wx.getStorageSync("enterpriseExhSign") || "";
 Page({
 
   /**
@@ -17,7 +14,6 @@ Page({
     passwordType:"password",
     isLookClass:"icon-hide"
   },
-
   userCodeInput: function (e) {
     this.setData({
       userCode: e.detail.value
@@ -44,18 +40,19 @@ Page({
       focus:true
     })
   },
+  onHide:function(){
+
+  },
   seePassword: function () {
     if (this.data.passwordType =="password"){
       this.setData({
         isLookClass: "icon-display",
-        passwordType: "text",
-        focus: true
+        passwordType: "text"
       })
     }else{
       this.setData({
         isLookClass: "icon-hide",
-        passwordType: "password",
-        focus: true
+        passwordType: "password"
       })
     }
   },
@@ -71,20 +68,18 @@ Page({
           wx.showToast({
             title: "登录成功"
           })
-          const result = res.data.data;
+          var result = res.data.data;
           app.globalData.account = result.account;
           app.globalData.enterprise = result.enterprise;
-          app.globalData.enterpriseExhSign = result.enterpriseExhSign;
           app.globalData.loginStatus = true;
           wx.setStorageSync('account', result.account);
           wx.setStorageSync('enterprise', result.enterprise);
-          wx.setStorageSync('enterpriseExhSign', result.enterpriseExhSign);
-          wx.setStorageSync('loginStatus', result.enterpriseExhSign);
+          wx.setStorageSync('loginStatus', true);
           wx.switchTab({
             url: '/pages/account/account',
           })
         }else{
-          const msg = res.data.msg || "";
+          var msg = res.data.msg || "";
           wx.showToast({
             title: msg,
             icon: "none"

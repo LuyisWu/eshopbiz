@@ -5,7 +5,7 @@
       <image src='{{headImg}}' class='head-img'></image>
       <view class='account-sub-content' wx:if="{{loginStatus}}">
         <view class='account-phone'>{{phone}}</view>
-        <view class='account-name'>{{enterpriseName}}</view>
+        <view class='account-name'><block wx:if="{{hasCert}}">{{enterpriseName}}</block><block wx:else>未实名认证</block></view>
       </view>
       <view class='account-sub-wrapper' wx:else>
         <navigator url="/pages/login/login" class='account-login' open-type='navigate'>登录</navigator>
@@ -17,7 +17,7 @@
   <view class='account-content'>
     <block wx:for="{{actionList}}" wx:key="">
       <view class='action-item'>
-        <text data-url="{{item.path}}" class='action-link' bindtap='loginCheckNav'>
+        <text data-url="{{item.path}}" data-cert="{{hasCert}}" data-iscert="{{item.checkCert}}" class='action-link' bindtap='loginCheckNav'>
         <text class='action-link-title'><text class='action-link-icon {{item.icon}}' style='color:{{item.iconColor}}'></text>{{item.name}}</text>
         <text class='action-link-right icon-forward'></text>
         </text>
@@ -28,4 +28,6 @@
         <text class='action-bottom-title'>退出登录</text>
       </view>
   </view>
+  <dialog title="未实名认证" content="实名认证审核通过后可开通展厅功能,是否去实名认证" id="isCertDialog" bind:cancelEvent="_cancelEvent" bind:confirmEvent="_confirmEvent">
+  </dialog>
 </view>

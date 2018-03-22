@@ -3,19 +3,23 @@
   <view class='sign-form'>
     <form id='signForm'>
       <view class='sign-input-wrapper'>
-        <text class='icon-logo sign-icon'></text>
-        <input type='text' class='sign-input' name="phone" placeholder='请输入手机号' bindinput='phoneInput'></input>
+        <text class='icon-account sign-icon'></text>
+        <input type='text' class='sign-input' name="phone" placeholder='手机号' bindinput='phoneInput'></input>
       </view>
       <view class='sign-input-wrapper'>
-        <text class='icon-logo sign-icon'></text>
-        <input type='text' class='sign-input' name="phoneCode" maxlength="6" placeholder='请输入验证码' bindinput='phoneCodeInput'></input>
-        <button class='' disabled='{{disabled}}' bindtab="countDown" disabled='{{disabled}}' data-time="{{time}}" data-last="{{last}}">{{text}}</button>
+        <text class='icon-Password sign-icon'></text>
+        <input type='text' class='sign-input' name="phoneCode" maxlength="6" placeholder='验证码' bindinput='phoneCodeInput'></input>
+        <button class='msg-button' disabled='{{msgDisabled}}' bindtap='sendMsg' data-time='{{time}}'>{{text}}</button>
       </view>
-      <view class='sign-input-wrapper'>
-        <text class='icon-logo sign-icon'></text>
-        <input type='password' class='sign-input' name="password" placeholder='请输入您的密码' bindinput='passwordInput'></input>
+      <view class='sign-input-wrapper relative'>
+        <text class='icon-Verification-Code sign-icon'></text>
+        <input type='{{passwordType}}' class='sign-input' name="password" placeholder='密码' bindinput='passwordInput' value='{{password}}' focus='{{focus}}'></input>
+        <view class='sign-icon-wrapper' wx:if="{{hasValue}}">
+          <text class='icon-Close sign-password-icon' bindtap='cleanPassword'></text>
+          <text class='sign-password-icon {{isLookClass}}' bindtap='seePassword'></text>
+        </view>
       </view>
-      <button class='sign-button' bindtap='signAction' disabled='{{disabled}}'>登  录</button>
+      <button class='sign-button' bindtap='signAction' disabled='{{disabled}}'>注  册</button>
     </form>
   </view>
 </view>

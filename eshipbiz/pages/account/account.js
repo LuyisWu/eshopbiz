@@ -1,7 +1,5 @@
 // pages/account/account.js
 var app = getApp()
-var account = wx.getStorageSync("account") || app.globalData.account;
-var enterprise = wx.getStorageSync("enterprise") || app.globalData.enterprise;
 Page({
 
   /**
@@ -9,73 +7,96 @@ Page({
    */
   data: {
     phone:"",
-    headImg: "/images/menu/menu-1.png",
+    headImg: "/images/info-logo.png",
     enterpriseName:"",
+    hasCert:"0",
     loginStatus:false,
     actionList:[{
         icon:"icon-Business-opportunity",
         iconColor:"#7bb0ff",
         name:"我的商机",
         path:"/pages/mybusiness/mybusiness",
-        type:"navigate"
+        checkCert:false                                                                                                                                                                                                                                                                                                                                              
     }, {
       icon: "icon-cert",
       iconColor: "#5ee09b",
       name: "实名认证",
       path: "/pages/cert/cert",
-      type: "navigate"
+      checkCert: false
     }, {
       icon: "icon-The-exhibition-hall",
       iconColor: "#fabf13",
       name: "我的展厅",
       path: "/pages/eshop/eshop", 
-      type: "navigate"
+      checkCert: true
     }, {
       icon: "icon-Personal-information",
       iconColor: "#fabf13",
       name: "个人信息",
       path: "/pages/info/info",
-      type: "navigate"
+      checkCert: false
     },{
       icon: "icon-Supplier",
       iconColor: "#7bb0ff",
       name: "我的供应商",
       path: "/pages/mysupplier/mysupplier",
-      type: "navigate"
+      checkCert: false
     }]
   },
   onShow: function(){
-    if (account!=null && account !=""){
+    this.dialog = this.selectComponent("#isCertDialog");
+    if (app.globalData.loginStatus ==true){
+      if (app.globalData.enterprise.authentication =="2"){
+        this.setData({
+          loginStatus: app.globalData.loginStatus,
+          phone: app.globalData.account.phone || "",
+          headImg: app.globalData.account.headImg || "/images/info-logo.png",
+          enterpriseName: app.globalData.enterprise.enterpriseName || "",
+          hasCert: true
+        })
+      }else{
       this.setData({
         loginStatus: app.globalData.loginStatus,
-        phone: account.phone || "",
-        headImg: account.headImg || "/images/menu/menu-1.png",
-        enterpriseName: enterprise.enterpriseName || ""
+        phone: app.globalData.account.phone || "",
+        headImg: app.globalData.account.headImg || "/images/info-logo.png",
+        enterpriseName: app.globalData.enterprise.enterpriseName || "",
+        hasCert: false
       })
+      }
     }
   },
   loginCheckNav:function(e){
     var url = e.target.dataset.url;
-    if(app.globalData.loginStatus ==true){
-      wx.navigateTo({
-        url: url
-      })
+    var ckCert = e.target.dataset.iscert;
+    if(app.globalData.loginStatus){
+      if (this.data.hasCert || !ckCert){
+        wx.navigateTo({
+          url: url
+        })
+      }else{
+        this.dialog.showDialog();
+      }
+      
     }else{
       wx.navigateTo({
         url: "/pages/login/login"
       })
     }
   },
-  navToInfo: function(){
-    wx.redirectTo({
-      url: '/pages/info/info',
+  _cancelEvent: function () {
+    this.dialog.hideDialog();
+  },
+  _confirmEvent:function(){
+    this.dialog.hideDialog();
+    wx.navigateTo({
+      url: '/pages/cert/cert',
     })
   },
   loginOut: function(e){
     wx.request({
       url: app.globalData.host+'/rest/lp/account/signOut',
       data:{
-        userToken: account.accountId
+        userToken: app.globalData.account.accountId
       },
       success:res =>{
         if(res.data.status ==200){

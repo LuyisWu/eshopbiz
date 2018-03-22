@@ -4,10 +4,10 @@
   <view class='login-form'>
     <form id='loginForm'>
       <view>
-        <input type='text' class='login-input' name="userCode" placeholder='请输入手机号' bindinput='userCodeInput'></input>
+        <input type='text' class='login-input' name="userCode" placeholder='手机号' bindinput='userCodeInput'></input>
       </view>
       <view class='relative'>
-        <input type='{{passwordType}}' class='login-input' name="password" placeholder='请输入您的密码' bindinput='passwordInput' value='{{password}}' focus='{{focus}}'></input>
+        <input type='{{passwordType}}' class='login-input' name="password" placeholder='密码' bindinput='passwordInput' value='{{password}}' focus='{{focus}}'></input>
         <view class='login-icon-wrapper' wx:if="{{hasValue}}">
           <text class='icon-Close login-icon' bindtap='cleanPassword'></text>
           <text class='login-icon {{isLookClass}}' bindtap='seePassword'></text>

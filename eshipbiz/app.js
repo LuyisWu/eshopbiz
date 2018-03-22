@@ -2,7 +2,7 @@
 App({
   onLaunch: function () {
     // 展示本地存储能力
-    var account = wx.getStorageSync('account') || ""
+    var account = wx.getStorageSync('account')
     // 登录
     wx.login({
       success: res => {
@@ -32,31 +32,28 @@ App({
     wx.request({
       url: this.globalData.host + "/rest/lp/common/getProjectInfo",
       success: res => {
-        if (res.status == 200) {
-          this.globalData.crmDomain = res.data.crmDomain;
-          this.globalData.ehbDomain = res.data.ehbDomain;
-          this.globalData.insheetDomain = res.data.insheetDomain;
-          this.globalData.mallHomeDomain = res.data.mallHomeDomain;
-          this.globalData.quotationDomain = res.data.quotationDomain;
-          this.globalData.platformName = res.data.platformName;
-          this.globalData.cbytPhoneNum = res.data.cbytPhoneNum;
-          this.globalData.manageDomain = res.data.manageDomain;
+        if (res.data.status == 200) {
+          this.globalData.domains = res.data.data;
         }
       }
     });
-    if (account !=""){
+    if (account !="" && account!=null){
       wx.request({
         url: this.globalData.host+'/rest/lp/account/getUserInfo',
         data: {
           userToken: account.accountId,
-          verificationToken:account.token
+          verificationToken: account.token
         },
         success: res => {
-          let result = res.data.data;
+          var result = res.data.data;
           this.globalData.account = result.account;
           this.globalData.enterprise = result.enterprise;
           this.globalData.enterpriseExhSign = result.enterpriseExhSign;
           this.globalData.loginStatus = true;
+          wx.setStorageSync('account', result.account);
+          wx.setStorageSync('enterpriseExhSign', result.enterpriseExhSign);
+          wx.setStorageSync('enterprise', result.enterprise.enterprise);
+          wx.setStorageSync('loginStatus', true);
         }
       })
     }
@@ -67,14 +64,7 @@ App({
     account:null,
     enterprise:null,
     enterpriseExhSign:null,
-    host:"http://localhost:8081",
-    crmDomain: null,//客户管理域名
-    ehbDomain: null,//展厅域名
-    insheetDomain: null,//询价域名
-    mallHomeDomain: null,//商城域名
-    quotationDomain: null,//报价域名
-    platformName: null,//平台名称，即 海舶士
-    cbytPhoneNum: null,//平台热线
-    manageDomain: null,//后台管理域名
+    host:"http://192.168.101.77:8081",
+    domains:null
   }
 })
