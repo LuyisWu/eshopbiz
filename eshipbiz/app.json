@@ -14,13 +14,11 @@
     "pages/eshop/eshop",
     "pages/info/info",
     "pages/mybusiness/mybusiness",
-    "components/tbutton/tbutton",
     "pages/editinfo/name/name",
-    "pages/editinfo/logo/logo",
-    "pages/editinfo/sexuality/sexuality",
     "pages/editinfo/job/job",
     "pages/editinfo/partment/partment",
-    "pages/editinfo/phone/phone"
+    "pages/editinfo/phone/phone",
+    "pages/agreement/agreement"
   ],
   "window": {
     "backgroundTextStyle": "light",

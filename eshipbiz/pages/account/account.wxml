@@ -1,6 +1,6 @@
 <!--pages/account/account.wxml-->
 <view class='container'>
-  <view class='account-bg' style='background: url(/images/banner1.png) center center no-repeat;'>
+  <view class='account-bg' style='background: url(/images/info-banner.png) center center no-repeat;'>
     <view class='account-bg-content'>
       <image src='{{headImg}}' class='head-img'></image>
       <view class='account-sub-content' wx:if="{{loginStatus}}">

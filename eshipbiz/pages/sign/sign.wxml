@@ -19,7 +19,11 @@
           <text class='sign-password-icon {{isLookClass}}' bindtap='seePassword'></text>
         </view>
       </view>
+      <view class='sign-agreement'>注册即代表阅读并同意<navigator url='/pages/agreement/agreement' open-type='navigate' class='nav-to-agreement'>《海舶士服务条款》</navigator></view>
       <button class='sign-button' bindtap='signAction' disabled='{{disabled}}'>注  册</button>
+      <view class=''>
+        <navigator url='pages/login/login' open-type='navigate' class='sign-to-login'>已有账号？立即登录</navigator>
+      </view>
     </form>
   </view>
 </view>

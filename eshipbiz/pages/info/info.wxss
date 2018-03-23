@@ -66,7 +66,7 @@ page{
 .info-text-icon{
   line-height: 90rpx;
   font-size: 28rpx;
-  vertical-align: middle;
+  vertical-align: top;
   padding-left: 20rpx;
   color: #505050;
 }
@@ -74,4 +74,10 @@ page{
   line-height: 90rpx;
   font-size: 28rpx;
   color: 505050;
+  width:250rpx;
+  overflow:hidden;
+  display:inline-block;
+  height:90rpx;
+  text-align: right;
+
 }

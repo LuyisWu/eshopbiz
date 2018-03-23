@@ -1,2 +1,7 @@
 <!--pages/editinfo/phone/phone.wxml-->
-<text>pages/editinfo/phone/phone.wxml</text>
+<view class='info-view'>
+  <form id='editInfoForm'>
+  <input class='edit-info-input' auto-focus='true'></input>
+  <button bindtap='saveInfo' class='save-info'>保  存</button>
+  </form>
+</view>

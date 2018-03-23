@@ -16,8 +16,7 @@ Page({
         iconColor:"#7bb0ff",
         name:"我的商机",
         path:"/pages/mybusiness/mybusiness",
-        checkCert:false                                                                                                                                                                                                                                                                                                                                              
-    }, {
+        checkCert:false                                                                                                                    }, {
       icon: "icon-cert",
       iconColor: "#5ee09b",
       name: "实名认证",

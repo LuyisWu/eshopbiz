@@ -18,4 +18,13 @@
 .absolute{
   position: absolute;
 }
-
+.msg-button{
+  background: #505050;
+  color: #fff;
+  width: 190rpx;
+  position:absolute;
+  font-size:26rpx;
+  top:18rpx;
+  right: 40rpx;
+  z-index: 9;
+}

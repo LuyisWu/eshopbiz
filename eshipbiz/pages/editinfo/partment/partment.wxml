@@ -1,2 +1,7 @@
 <!--pages/editinfo/partment/partment.wxml-->
-<text>pages/editinfo/partment/partment.wxml</text>
+<view class='info-view'>
+  <form id='editInfoForm'>
+  <input class='edit-info-input' bindinput='deptNameInput' value='{{deptName}}' maxlength='10' auto-focus='true'></input>
+  <button bindtap='saveInfo' class='save-info'>保  存</button>
+  </form>
+</view>

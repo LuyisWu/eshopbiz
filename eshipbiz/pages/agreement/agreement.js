@@ -1,4 +1,4 @@
-// pages/editinfo/logo/logo.js
+// pages/agreement/agreement.js
 Page({
 
   /**

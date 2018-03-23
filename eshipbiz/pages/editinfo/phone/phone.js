@@ -1,4 +1,5 @@
 // pages/editinfo/phone/phone.js
+var app = getApp()
 Page({
 
   /**

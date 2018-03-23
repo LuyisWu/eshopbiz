@@ -43,13 +43,19 @@
   padding-right: 20rpx;
   background: #fff;
 }
-.msg-button{
-  background: #505050;
-  color: #fff;
-  width: 190rpx;
-  position:absolute;
-  font-size:26rpx;
-  top:18rpx;
-  right: 40rpx;
-  z-index: 9;
+.sign-to-login{
+  font-size: 24rpx;
+  color: #505050;
+  text-align: center;
+  padding-top: 40rpx;
+}
+.sign-agreement{
+  font-size: 24rpx;
+  padding-left: 20rpx;
+  padding-top: 20rpx;
+  color: #505050;
+}
+.nav-to-agreement{
+  color: #fabf1b;
+  display: inline;
 }
