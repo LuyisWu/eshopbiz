@@ -1,7 +1,12 @@
 <!--pages/editinfo/phone/phone.wxml-->
 <view class='info-view'>
   <form id='editInfoForm'>
-  <input class='edit-info-input' auto-focus='true'></input>
+  <view class='edit-input-left'>
+    <input class='edit-info-area' bindinput='areaCodeInput' value='{{areaCode}}' maxlength='4' placeholder='区号'></input>
+  </view>
+  <view class='edit-input-right'>
+    <input class='edit-info-input' bindinput='landlineInput' value='{{landline}}' maxlength='10' auto-focus='true' placeholder='电话号码'></input>
+  </view>
   <button bindtap='saveInfo' class='save-info'>保  存</button>
   </form>
 </view>

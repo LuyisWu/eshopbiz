@@ -6,8 +6,21 @@ page{
   background: #fabf13;
   margin:0 20rpx;
 }
+.edit-input-left{
+  width: 30%;
+  display: inline-block;
+  margin: 20rpx 0 40rpx;
+}
+.edit-input-right{
+  width: 70%;
+  display: inline-block;
+  margin: 20rpx 0 40rpx;
+}
+.edit-info-area{
+  background: #fff;
+  padding: 20rpx 40rpx;
+}
 .edit-info-input{
   background: #fff;
   padding: 20rpx 40rpx;
-  margin: 20rpx 0 40rpx;
 }

@@ -5,7 +5,6 @@
     "pages/supplier/supplier",
     "pages/message/message",
     "pages/account/account",
-    "pages/password/password",
     "pages/login/login",
     "pages/sign/sign",
     "pages/forget/forget",
@@ -18,7 +17,8 @@
     "pages/editinfo/job/job",
     "pages/editinfo/partment/partment",
     "pages/editinfo/phone/phone",
-    "pages/agreement/agreement"
+    "pages/agreement/agreement",
+    "pages/certres/certres"
   ],
   "window": {
     "backgroundTextStyle": "light",

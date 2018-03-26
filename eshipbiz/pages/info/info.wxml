@@ -18,11 +18,7 @@
       <view class='info-nav' bindtap='pickerClick'>
         <label class='info-nav-left'>性别</label>
         <view class='info-nav-right' >
-            <picker bindchange="bindPickerChange" value="{{index}}" range="{{sList}}" mode = "selector" class='info-text'>
-              <view class="picker">
-                {{sList[index]}}
-              </view>
-            </picker>
+            <text bindtap='showModalIt' class='info-text'><block wx:if="{{sex == 0}}">男</block><block wx:if="{{sex == 1}}">女</block></text>
             <text class='icon-Arrow info-text-icon'></text>
         </view>
       </view>
@@ -42,7 +38,7 @@
     <view class='info-item'>
       <navigator class='info-nav-last' url='/pages/editinfo/phone/phone' open-type='navigate'>
         <label class='info-nav-left'>业务电话</label>
-        <view class='info-nav-right'><text class='info-text'>{{areaCode}}{{landline}}</text><text class='icon-Arrow info-text-icon'></text></view>
+        <view class='info-nav-right'><text class='info-text'><block wx:if="{{areaCode !=''}}">{{areaCode}}-{{landline}}</block></text><text class='icon-Arrow info-text-icon'></text></view>
       </navigator>
     </view>
   </view>

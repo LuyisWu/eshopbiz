@@ -1,0 +1,87 @@
+/* pages/certres/certres.wxss */
+page{
+  background: #f5f5f5;
+}
+.cert-wrapper{
+  position: relative;
+  width: 100%;
+}
+.cert-top{
+  text-align: center;
+}
+.cert-top-top{
+  margin-top: 120rpx;
+}
+.cert-top-middle{
+  margin-top: 40rpx;
+  font-size: 36rpx;
+  color: #000;
+}
+.cert-top-bottom{
+  margin-top: 40rpx;
+  font-size: 24rpx;
+  color: #7d7d7d;
+}
+.cert-bottom{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.cert-bottom-title{
+  text-align: center;
+  font-size: 24rpx;
+  color: #505050;
+  margin-bottom: 40rpx;
+}
+.cert-bottom-content{
+  width: 100%;
+  background: #fabf1b;
+  font-size: 32rpx;
+  line-height: 100rpx;
+  height: 100rpx;
+  text-align: center;
+}
+.cert-success-top{
+  text-align: center;
+  margin: 60rpx 0;
+}
+.cert-success-top-top{
+  margin-bottom: 30rpx;
+}
+.cert-success-top-middle{
+  font-size: 30rpx;
+  color: #000;
+}
+.cert-success-middle{
+  background: #fff;
+}
+.cert-sub-title{
+  width: 100%;
+  line-height: 100rpx;
+  height: 100rpx;
+  text-align: left;
+  padding: 0 20rpx;
+  border-bottom: 1rpx solid #dcdcdc;
+}
+.cert-label{
+  font-size: 24rpx;
+  color: #7d7d7d;
+  line-height: 1;
+  margin-top: 30rpx;
+}
+.cert-content{
+  font-size: 28rpx;
+  color:#000;
+  margin-top: 10rpx;
+}
+.cert-width-60{
+  width: 60%;
+  display: inline-block;
+}
+.cert-width-40{
+  width: 40%;
+  display: inline-block;
+}
+.cert-items{
+  margin: 0 20rpx;
+}

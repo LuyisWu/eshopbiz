@@ -10,73 +10,69 @@ Page({
     headImg: "/images/info-logo.png",
     enterpriseName:"",
     hasCert:"0",
-    loginStatus:false,
-    actionList:[{
-        icon:"icon-Business-opportunity",
-        iconColor:"#7bb0ff",
-        name:"我的商机",
-        path:"/pages/mybusiness/mybusiness",
-        checkCert:false                                                                                                                    }, {
-      icon: "icon-cert",
-      iconColor: "#5ee09b",
-      name: "实名认证",
-      path: "/pages/cert/cert",
-      checkCert: false
-    }, {
-      icon: "icon-The-exhibition-hall",
-      iconColor: "#fabf13",
-      name: "我的展厅",
-      path: "/pages/eshop/eshop", 
-      checkCert: true
-    }, {
-      icon: "icon-Personal-information",
-      iconColor: "#fabf13",
-      name: "个人信息",
-      path: "/pages/info/info",
-      checkCert: false
-    },{
-      icon: "icon-Supplier",
-      iconColor: "#7bb0ff",
-      name: "我的供应商",
-      path: "/pages/mysupplier/mysupplier",
-      checkCert: false
-    }]
+    loginStatus:false
   },
   onShow: function(){
     this.dialog = this.selectComponent("#isCertDialog");
     if (app.globalData.loginStatus ==true){
-      if (app.globalData.enterprise.authentication =="2"){
-        this.setData({
-          loginStatus: app.globalData.loginStatus,
-          phone: app.globalData.account.phone || "",
-          headImg: app.globalData.account.headImg || "/images/info-logo.png",
-          enterpriseName: app.globalData.enterprise.enterpriseName || "",
-          hasCert: true
-        })
-      }else{
       this.setData({
         loginStatus: app.globalData.loginStatus,
         phone: app.globalData.account.phone || "",
         headImg: app.globalData.account.headImg || "/images/info-logo.png",
         enterpriseName: app.globalData.enterprise.enterpriseName || "",
-        hasCert: false
+        hasCert: app.globalData.enterprise.authentication || "0"
       })
+    }
+  },
+  navToRes:function(e){
+    var url = e.target.dataset.url;
+    wx.navigateTo({
+      url: url
+    })
+  },
+  certCheckNav:function(e){
+    var url = e.target.dataset.url;
+    if(this.data.loginStatus){
+      if (this.data.hasCert =="0") {
+        wx.navigateTo({
+          url: "/pages/cert/cert"
+        })
+      }else{
+        wx.navigateTo({
+          url: url
+        })
       }
+    }else {
+      wx.navigateTo({
+        url: "/pages/login/login"
+      })
     }
   },
   loginCheckNav:function(e){
     var url = e.target.dataset.url;
-    var ckCert = e.target.dataset.iscert;
+    // 判断是否登录
     if(app.globalData.loginStatus){
-      if (this.data.hasCert || !ckCert){
         wx.navigateTo({
           url: url
         })
-      }else{
+    }else{
+      wx.navigateTo({
+        url: "/pages/login/login"
+      })
+    }
+  },
+  eshopCheckNav: function (e) {
+    var url = e.target.dataset.url;
+    // 判断是否登录
+    if (app.globalData.loginStatus) {
+      if (this.data.hasCert =="2") {
+        wx.navigateTo({
+          url: url
+        })
+      } else {
         this.dialog.showDialog();
       }
-      
-    }else{
+    } else {
       wx.navigateTo({
         url: "/pages/login/login"
       })
@@ -87,9 +83,16 @@ Page({
   },
   _confirmEvent:function(){
     this.dialog.hideDialog();
-    wx.navigateTo({
-      url: '/pages/cert/cert',
-    })
+    if (this.data.hasCert == "0"){
+      wx.navigateTo({
+        url: '/pages/cert/cert',
+      })
+    }else{
+      wx.navigateTo({
+        url: '/pages/certres/certres',
+      })
+    }
+    
   },
   loginOut: function(e){
     wx.request({

@@ -64,7 +64,7 @@ App({
     account:null,
     enterprise:null,
     enterpriseExhSign:null,
-    host:"http://192.168.101.77:8081",
+    host:"http://localhost:8081",
     domains:null
   }
 })

@@ -1,2 +1,27 @@
 <!--pages/forget/forget.wxml-->
-<text>pages/forget/forget.wxml</text>
+<!--pages/forget/forget.wxml-->
+<view class='container'>
+  <view class='forget-form'>
+    <form id='forgetForm'>
+      <view class='forget-input-wrapper'>
+        <text class='icon-account forget-icon'></text>
+        <input type='text' class='forget-input' name="phone" placeholder='手机号' bindinput='phoneInput'></input>
+      </view>
+      <view class='forget-input-wrapper'>
+        <text class='icon-Password forget-icon'></text>
+        <input type='text' class='forget-input' name="phoneCode" maxlength="6" placeholder='验证码' bindinput='phoneCodeInput'></input>
+        <button class='msg-button' disabled='{{msgDisabled}}' bindtap='sendMsg' data-time='{{time}}'>{{text}}</button>
+      </view>
+      <view class='forget-input-wrapper relative'>
+        <text class='icon-Verification-Code forget-icon'></text>
+        <input type='{{passwordType}}' class='forget-input' name="password" placeholder='密码' bindinput='passwordInput' value='{{password}}' focus='{{focus}}'></input>
+        <view class='forget-icon-wrapper' wx:if="{{hasValue}}">
+          <text class='icon-Close forget-password-icon' bindtap='cleanPassword'></text>
+          <text class='forget-password-icon {{isLookClass}}' bindtap='seePassword'></text>
+        </view>
+      </view>
+      <button class='forget-button' bindtap='forgetAction' disabled='{{disabled}}'>提  交</button>
+    </form>
+  </view>
+</view>
+

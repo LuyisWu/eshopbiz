@@ -1,0 +1,81 @@
+<!--pages/certres/certres.wxml-->
+<view class='container'>
+  <block wx:if="{{certLv =='1'}}">
+    <view class='cert-wrapper'>
+      <view class='cert-top'>
+        <view class='cert-top-top'>
+          <icon class='cert-top-icon' type='waiting' size='48'></icon>
+        </view>
+        <view class='cert-top-middle'>认证审核中</view>
+        <view class='cert-top-bottom'>认证资料已提交,正在审核中</view>
+      </view>
+      <view class='cert-bottom'>
+        <view class='cert-bottom-title'>全国统一客服电话</view>
+        <view bindtap='calling' class='cert-bottom-content'>
+          {{phone}}
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:if="{{certLv =='2'}}">
+    <view class='cert-wrapper'>
+      <view class='cert-success-top'>
+        <view class='cert-success-top-top'>
+          <icon class='cert-success-top-icon' type='success' size='48'></icon>
+        </view>
+        <view class='cert-success-top-middle'>您已成功通过海舶士企业身份认证</view>
+      </view>
+      <view class='cert-success-middle'>
+        <view class='cert-sub-title'>
+        基本信息
+        </view>
+        <view class='cert-items'>
+          <view class='cert-info-item'>
+            <text class="cert-label">企业名称</text>
+            <view class="cert-content">{{enterprise.enterpriseName}}</view>
+          </view>
+          <view class='cert-info-item cert-width-60'>
+            <text class="cert-label">企业类型</text>
+            <view class="cert-content">{{enterprise.enterpriseTypeBusiness}}</view>
+          </view>
+          <view class='cert-info-item cert-width-40'>
+            <text class="cert-label">法定代表</text>
+            <view class="cert-content">{{enterprise.enterpriseLegalPerson}}</view>
+          </view>
+          <view class='cert-info-item cert-width-60'>
+            <text class="cert-label">企业类别</text>
+            <view class="cert-content">{{enterprise.enterpriseModuleName}}</view>
+          </view>
+          <view class='cert-info-item cert-width-40'>
+            <text class="cert-label">注册日期</text>
+            <view class="cert-content">{{enterprise.enterpriseName}}</view>
+          </view>
+          <view class='cert-info-item cert-width-60'>
+            <text class="cert-label">企业类型</text>
+            <view class="cert-content">{{enterprise.enterpriseTypeBusiness}}</view>
+          </view>
+          <view class='cert-info-item cert-width-40'>
+            <text class="cert-label">企业名称</text>
+            <view class="cert-content">{{enterprise.enterpriseName}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:if="{{certLv =='3'}}">
+    <view class='cert-wrapper'>
+      <view class='cert-top'>
+        <view class='cert-top-top'>
+          <icon class='cert-top-icon' type='warn' size='48'></icon>
+        </view>
+        <view class='cert-top-middle'>未通过审核</view>
+        <view class='cert-top-bottom'>您可以再次提交资料进行审核</view>
+      </view>
+      <view class='cert-bottom'>
+        <view bindtap='toCert' class='cert-bottom-content'>
+          重新认证
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

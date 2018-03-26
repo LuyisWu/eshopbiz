@@ -70,12 +70,28 @@ Page({
       }
     })
   },
-  pickerClick: function(){
-    this.triggerEvent("bindPickerChange");
-  },
-  bindPickerChange: function (e) {
-    this.setData({
-      index: e.detail.value
+  showModalIt:function(){
+    var that = this;
+    wx.showActionSheet({
+      itemList: this.data.sList,
+      success: function (res) {
+        var sex = res.tapIndex; 
+        wx.request({
+          url: app.globalData.host + '/rest/lp/uptAccount/updateAccount',
+          data: {
+            sex: sex,
+            userToken: app.globalData.account.accountId,
+            verificationToken: app.globalData.account.token
+          },
+          success: res => {
+            that.setData({
+              sex:sex
+            })
+            app.globalData.account.sex = sex;
+            wx.setStorageSync("account", app.globalData.account);
+          }
+        })
+      }
     })
-  },
+  }
 })

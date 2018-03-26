@@ -17,7 +17,6 @@
 .sign-button{
   margin: 40rpx 20rpx 0;
   background: #fabf1b;
-  border-radius: 4rpx;
   font-size: 32rpx;
 }
 .sign-input-wrapper{

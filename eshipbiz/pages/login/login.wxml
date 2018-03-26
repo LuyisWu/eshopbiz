@@ -4,7 +4,7 @@
   <view class='login-form'>
     <form id='loginForm'>
       <view>
-        <input type='text' class='login-input' name="userCode" placeholder='手机号' bindinput='userCodeInput'></input>
+        <input type='number' class='login-input' name="userCode" placeholder='手机号' bindinput='userCodeInput'></input>
       </view>
       <view class='relative'>
         <input type='{{passwordType}}' class='login-input' name="password" placeholder='密码' bindinput='passwordInput' value='{{password}}' focus='{{focus}}'></input>

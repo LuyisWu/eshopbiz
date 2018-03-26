@@ -153,10 +153,12 @@ Page({
           wx.showToast({
             title: "注册成功"
           })
-          const result = res.data.data;
-          app.globalData.account = result;
+          var result = res.data.data;
+          app.globalData.account = result.account;
+          app.globalData.enterprise = result.enterprise;
           app.globalData.loginStatus = true;
-          wx.setStorageSync('account', result);
+          wx.setStorageSync('account', result.account);
+          wx.setStorageSync('enterprise', result.enterprise);
           wx.setStorageSync('loginStatus', true);
           wx.switchTab({
             url: '/pages/account/account',

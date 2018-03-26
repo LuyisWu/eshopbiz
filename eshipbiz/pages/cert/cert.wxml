@@ -1,2 +1,27 @@
 <!--pages/cert/cert.wxml-->
-<text>pages/cert/cert.wxml</text>
+<view class='cert-form'>
+  <view class='cert-img-wrapper'>
+    <block wx:if="{{hasImg}}">
+    <view class='cert-inner' bindtap='addCertImg'>
+        <image src="{{businessLicenseImg}}" class='cert-img' mode="aspectFit"></image>
+      </view>
+    </block>
+    <block wx:else>
+      <view class='cert-img-outer'>
+        <view class='cert-img-inner' bindtap='addCertImg'>
+          <view>
+            <text class='icon-increase cert-img-icon'></text>
+          </view>
+          <view>
+            <text class='cert-img-title'>点击上传营业执照</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class='enterprise-module' bindtap='showEnterpriseModule'>
+      <label class='cert-nav-left'>企业类别:</label>
+      <view class='cert-nav-right'><text class='cert-text'>{{enterpriseModuleName}}</text><text class='icon-Arrow cert-text-icon'></text></view>
+  </view>
+  <button class='cert-button' bindtap='submitCert'>提交认证</button>
+</view>

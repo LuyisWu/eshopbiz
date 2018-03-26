@@ -3,7 +3,7 @@
   width: 100%;
 }
 .login-input{
-  border-bottom: 1px solid #dcdcdc;
+  border-bottom: 1rpx solid #dcdcdc;
   line-height: 100rpx;
   height: 100rpx;
   padding-left: 20rpx;
@@ -11,13 +11,12 @@
   display: block;
   font-size: 28rpx;
 }
-.login-input::hover{
+.login-input::focus{
   border-color: #fabf13;
 }
 .login-button{
   margin: 40rpx 20rpx 0;
   background: #fabf1b;
-  border-radius: 4rpx;
   font-size: 32rpx;
 }
 .login-nav-wrapper{

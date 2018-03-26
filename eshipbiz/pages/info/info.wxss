@@ -79,5 +79,4 @@ page{
   display:inline-block;
   height:90rpx;
   text-align: right;
-
 }

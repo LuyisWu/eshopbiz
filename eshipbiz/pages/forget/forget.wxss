@@ -1,1 +1,61 @@
 /* pages/forget/forget.wxss */
+.forget-form{
+  width: 100%;
+}
+.forget-input{
+  border-bottom: 1px solid #dcdcdc;
+  line-height: 100rpx;
+  height: 100rpx;
+  padding-left: 60rpx;
+  margin: 0 20rpx;
+  display: block;
+  font-size: 28rpx;
+}
+.forget-input::focus{
+  border-color: #fabf13;
+}
+.forget-button{
+  margin: 40rpx 20rpx 0;
+  background: #fabf1b;
+  border-radius: 4rpx;
+  font-size: 32rpx;
+}
+.forget-input-wrapper{
+  width: 100%;
+  position: relative;
+}
+.forget-icon{
+  position: absolute;
+  left: 20rpx;
+  top: 32rpx;
+}
+.forget-icon-wrapper{
+  position: absolute;
+  right: 20rpx;
+  top: 26rpx;
+  background: #fff;
+  z-index: 9;
+  padding-left: 20rpx;
+}
+.forget-password-icon{
+  font-size: 48rpx;
+  color: #c8c8c8;
+  padding-right: 20rpx;
+  background: #fff;
+}
+.forget-to-login{
+  font-size: 24rpx;
+  color: #505050;
+  text-align: center;
+  padding-top: 40rpx;
+}
+.forget-agreement{
+  font-size: 24rpx;
+  padding-left: 20rpx;
+  padding-top: 20rpx;
+  color: #505050;
+}
+.nav-to-agreement{
+  color: #fabf1b;
+  display: inline;
+}

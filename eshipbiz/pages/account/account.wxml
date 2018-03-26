@@ -5,28 +5,62 @@
       <image src='{{headImg}}' class='head-img'></image>
       <view class='account-sub-content' wx:if="{{loginStatus}}">
         <view class='account-phone'>{{phone}}</view>
-        <view class='account-name'><block wx:if="{{hasCert}}">{{enterpriseName}}</block><block wx:else>未实名认证</block></view>
+        <view class='account-name'><block wx:if="{{enterpriseName !=''}}">{{enterpriseName}}</block><block wx:else>未实名认证</block></view>
       </view>
       <view class='account-sub-wrapper' wx:else>
-        <navigator url="/pages/login/login" class='account-login' open-type='navigate'>登录</navigator>
+        <text data-url="/pages/login/login" class='account-login' bindtap='navToRes'>登录</text>
         <text class='account-line'></text>
-        <navigator url="/pages/sign/sign" class='account-sign' open-type='navigate'>注册</navigator>
+        <text data-url="/pages/sign/sign" class='account-sign' bindtap='navToRes'>注册</text>
       </view>
     </view>
   </view>
   <view class='account-content'>
-    <block wx:for="{{actionList}}" wx:key="">
+    <view class='action-items'>
       <view class='action-item'>
-        <text data-url="{{item.path}}" data-cert="{{hasCert}}" data-iscert="{{item.checkCert}}" class='action-link' bindtap='loginCheckNav'>
-        <text class='action-link-title'><text class='action-link-icon {{item.icon}}' style='color:{{item.iconColor}}'></text>{{item.name}}</text>
-        <text class='action-link-right icon-forward'></text>
+        <view data-url="/pages/mybusiness/mybusiness" class='action-link' bindtap='loginCheckNav'>
+          <text class='action-link-title'>
+            <text class='action-link-icon icon-Business-opportunity' style='color:#7bb0ff'></text>我的商机
+          </text>
+          <text class='action-link-right icon-Arrow'></text>
+        </view>
+      </view>
+      <view class='action-item'>
+        <view data-url="/pages/certres/certres" class='action-link' bindtap='certCheckNav'>
+          <text class='action-link-title'>
+            <text class='action-link-icon icon-cert' style='color:#5ee09b'></text>实名认证
+          </text>
+          <text class='action-link-right icon-Arrow'></text>
+        </view>
+      </view>
+      <view class='action-item'>
+        <view data-url="/pages/eshop/eshop" class='action-link' bindtap='eshopCheckNav'>
+          <text class='action-link-title'>
+            <text class='action-link-icon icon-The-exhibition-hall' style='color:#fabf13'></text>我的展厅
+          </text>
+          <text class='action-link-right icon-Arrow'></text>
+        </view>
+      </view>
+      <view class='action-item'>
+        <view data-url="/pages/info/info" class='action-link' bindtap='loginCheckNav'>
+        <text class='action-link-title'>
+          <text class='action-link-icon icon-Personal-information' style='color:#fabf13'></text>个人信息
         </text>
+          <text class='action-link-right icon-Arrow'></text>
+        </view>
       </view>
-      </block>
-      <view class='action-bottom-item' bindtap='loginOut' wx:if="{{loginStatus}}">
-        <text class='action-bottom-icon icon-Sign-out'></text>
-        <text class='action-bottom-title'>退出登录</text>
+      <view class='action-item'>
+        <view data-url="/pages/mysupplier/mysupplier" class='action-link' bindtap='loginCheckNav'>
+          <text class='action-link-title'>
+            <text class='action-link-icon icon-Supplier' style='color:#7bb0ff'></text>我的供应商
+          </text>
+          <text class='action-link-right icon-Arrow'></text>
+        </view>
       </view>
+    </view>
+    <view class='action-bottom-item' bindtap='loginOut' wx:if="{{loginStatus}}">
+      <text class='action-bottom-icon icon-Sign-out'></text>
+      <text class='action-bottom-title'>退出登录</text>
+    </view>
   </view>
   <dialog title="未实名认证" content="实名认证审核通过后可开通展厅功能,是否去实名认证" id="isCertDialog" bind:cancelEvent="_cancelEvent" bind:confirmEvent="_confirmEvent">
   </dialog>
