@@ -65,6 +65,7 @@ App({
     enterprise:null,
     enterpriseExhSign:null,
     host:"http://localhost:8081",
-    domains:null
+    domains:null,
+    enterpriseKeywords:""
   }
 })

@@ -18,7 +18,8 @@
     "pages/editinfo/partment/partment",
     "pages/editinfo/phone/phone",
     "pages/agreement/agreement",
-    "pages/certres/certres"
+    "pages/certres/certres",
+    "pages/search/search"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -28,7 +29,7 @@
   },
   "tabBar": {
     "color": "#7d7d7d",
-    "selectedColor": "#fabf13",
+    "selectedColor": "#fabf1b",
     "backgroundColor": "white",
     "list": [
       {

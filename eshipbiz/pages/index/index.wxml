@@ -2,11 +2,15 @@
 <view class='container'>
   <view class='banner-wrapper relative' style='width: 100%'>
     <swiper interval='5000' indicator-active-color='#ffff' indicator-color='#1888c8' indicator-dots='true' circular="true" circular='true'>
-    <swiper-item>
-      <view class='relative'>
-        <image src='/images/banner1.png' style='width: 100%'></image>
-      </view>
-    </swiper-item>
+    <block wx:for="{{bannerList}}" wx:key="">
+      <block wx:if="{{item.type ==6}}">
+        <swiper-item>
+          <view class='relative'>
+            <image src='{{item.pic}}' style='width: 100%'></image>
+          </view>
+        </swiper-item>
+      </block>
+    </block>
     </swiper>
     <view class='index-search absolute'>
       <input class='index-search-input' type='text' bindtap='searchNav' placeholder='搜索您想要的企业名称、产品等'></input>

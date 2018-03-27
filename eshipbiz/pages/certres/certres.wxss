@@ -54,6 +54,7 @@ page{
 }
 .cert-success-middle{
   background: #fff;
+  margin-bottom:20rpx;
 }
 .cert-sub-title{
   width: 100%;
@@ -84,4 +85,17 @@ page{
 }
 .cert-items{
   margin: 0 20rpx;
+  padding-bottom: 40rpx;
+}
+.cert-inner{
+  text-align: center;
+}
+.cert-img{
+  background: #f5f5f5;
+  margin: 0 auto;
+  width: 300px;
+  height: 710rpx;
+}
+.cert-success-bottom{
+  background: #fff;
 }

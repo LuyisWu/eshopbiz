@@ -48,15 +48,47 @@
           </view>
           <view class='cert-info-item cert-width-40'>
             <text class="cert-label">注册日期</text>
-            <view class="cert-content">{{enterprise.enterpriseName}}</view>
+            <view class="cert-content">{{registeredDate}}</view>
           </view>
           <view class='cert-info-item cert-width-60'>
-            <text class="cert-label">企业类型</text>
-            <view class="cert-content">{{enterprise.enterpriseTypeBusiness}}</view>
+            <text class="cert-label">营业期限</text>
+            <view class="cert-content">{{businessStartDate}}<block wx:if="{{businessEndDate !=''}}">至{{businessEndDate}}</block><block wx:else>至无限期</block></view>
           </view>
           <view class='cert-info-item cert-width-40'>
-            <text class="cert-label">企业名称</text>
-            <view class="cert-content">{{enterprise.enterpriseName}}</view>
+            <text class="cert-label">注册资本</text>
+            <view class="cert-content">{{enterprise.registeredCapital}}</view>
+          </view>
+          <view class='cert-info-item'>
+            <text class="cert-label">注册地址</text>
+            <view class="cert-content">
+              <block wx:if="{{enterprise.registeredAddressLv1 !=''}}">{{enterprise.registeredAddressLv1}}</block>
+              <block wx:if="{{enterprise.registeredAddressLv2 !=''}}">{{enterprise.registeredAddressLv2}}</block>
+              <block wx:if="{{enterprise.registeredAddressLv3 !=''}}">{{enterprise.registeredAddressLv3}}</block>
+              <block wx:if="{{enterprise.registeredAddress1 !=''}}"> {{enterprise.registeredAddress1}}</block>
+            </view>
+          </view>
+          <view class='cert-info-item'>
+            <text class="cert-label">经营范围</text>
+            <view class="cert-content">{{enterprise.businessScope}}</view>
+          </view>
+        </view>
+      </view>
+      <view class='cert-success-bottom'>
+        <view class='cert-sub-title'>
+          营业执照
+        </view>
+        <view class='cert-items'>
+          <view class='cert-info-item'>
+            <text class="cert-label">统一社会信用代码</text>
+            <view class="cert-content">{{enterprise.businessLicense}}</view>
+          </view>
+          <view class='cert-info-item'>
+            <text class="cert-label">营业执照</text>
+            <view class="cert-content">
+              <view class='cert-inner'>
+                <image src="{{enterprise.businessLicenseImg}}" class='cert-img' mode="aspectFit"></image>
+              </view>
+            </view>
           </view>
         </view>
       </view>

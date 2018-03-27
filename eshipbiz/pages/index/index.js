@@ -60,18 +60,6 @@ Page({
   },
   onLoad: function () {
     var that = this;
-    this.dialog = this.selectComponent("#dialog");
-    this.setData({
-      bannerList:[
-        {
-          url: "",
-          path: "/images/banner1.png"
-        }, {
-          url: "",
-          path: "/images/banner1.png"
-        }
-      ]
-    });
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -99,10 +87,29 @@ Page({
       })
     }
   },
+  onShow: function(){
+    var that =this;
+    wx.request({
+      url: app.globalData.domains.mallHomeDomain + '/wechat/banner',
+      success: function(res){
+        var r = res.data;
+        if(r.status == 200){
+          that.setData({
+            bannerList: r.data
+          })
+        }
+      }
+    });
+  },
   //banner图跳转事件
   bannerNav: function(e){
     wx.navigateTo({
       url: "",
+    })
+  },
+  searchNav: function(e){
+    wx.navigateTo({
+      url: "/pages/search/search",
     })
   },
   menuNav:function(e){

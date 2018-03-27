@@ -23,7 +23,9 @@ Page({
         certLv: app.globalData.enterprise.authentication || "0",
         phone: app.globalData.domains.cbytPhoneNum || "400-828-9936",
         enterprise: app.globalData.enterprise || "",
-        registeredDate: util.formatTime(app.globalData.enterprise.registeredDate) || ""
+        registeredDate: util.formatTime(app.globalData.enterprise.registeredDate,"Y-M-D") || "",
+        businessStartDate: util.formatTime(app.globalData.enterprise.businessStartDate, "Y-M-D") || "",
+        businessEndDate: util.formatTime(app.globalData.enterprise.businessEndDate, "Y-M-D") || ""
       })
     }
   },

@@ -2,7 +2,7 @@
 <view class='cert-form'>
   <view class='cert-img-wrapper'>
     <block wx:if="{{hasImg}}">
-    <view class='cert-inner' bindtap='addCertImg'>
+      <view class='cert-inner' bindtap='addCertImg'>
         <image src="{{businessLicenseImg}}" class='cert-img' mode="aspectFit"></image>
       </view>
     </block>

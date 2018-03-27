@@ -1,0 +1,93 @@
+/* pages/search/search.wxss */
+page{
+  background: #f5f5f5;
+}
+.search-top{
+  width: 100%;
+  display: flex;
+  background: #fff;
+  padding: 20rpx 0;
+}
+.search-top-left{
+  position: relative;
+  padding: 0 20rpx;
+  justify-content: flex-start;
+  width: 80%;
+}
+.search-top-right{
+  width: 20%;
+  justify-content: flex-end;
+  padding-right: 20rpx;
+}
+.search-icon{
+  position: absolute;
+  left:34rpx;
+  top:24rpx;
+}
+.search-keyword{
+  background: #f5f5f5;
+  border-radius: 32rpx;
+  height: 64rpx;
+  padding-left: 60rpx;
+  border: 1px solid #dcdcdc;
+  font-size: 24rpx;
+  color: #505050;
+  line-height: 64rpx;
+  vertical-align: top;
+}
+.search-keyword-placeholder{
+  height: 64rpx;
+  font-size: 24rpx;
+  color: #505050;
+  line-height: 64rpx;
+}
+.search-button{
+  font-size: 24rpx;
+  height: 68rpx;
+  line-height: 68rpx;
+  color: #fff;
+  background: #fabf1b;
+}
+.search-middle{
+  width: 100%;
+}
+.search-middle-title{
+  padding: 30rpx 0 20rpx;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #dcdcdc;
+  margin: 0 20rpx 10rpx;
+}
+.search-middle-title-left{
+  justify-content: flex-start;
+  font-size: 28rpx;
+  color: #000;
+}
+.search-middle-title-right{
+  justify-content: flex-end;
+  font-size:48rpx;
+  color: #969696;
+}
+.history-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 20rpx;
+}
+.recommend-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 20rpx;
+}
+.search-key-item{
+  justify-content: flex-start;
+  display: flex;
+  margin-top: 20rpx;
+  margin-right: 20rpx;
+}
+.search-key-button{
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 24rpx;
+}
