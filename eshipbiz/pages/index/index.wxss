@@ -24,6 +24,8 @@
   position: absolute;
   top: 18rpx;
   left: 50rpx;
+  font-size: 28rpx;
+  color: #505050;
   z-index: 12;
 }
 .index-menu-wrapper{

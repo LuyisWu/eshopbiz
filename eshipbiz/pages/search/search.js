@@ -34,6 +34,7 @@ Page({
     if (searchHistory.length > 0){
       this.setData({
         historyList: searchHistory,
+        currentKeywords: app.globalData.enterpriseKeywords,
         hasHistory: true
       })
     }else{

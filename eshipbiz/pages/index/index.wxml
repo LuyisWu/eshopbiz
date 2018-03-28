@@ -14,7 +14,7 @@
     </swiper>
     <view class='index-search absolute'>
       <input class='index-search-input' type='text' bindtap='searchNav' placeholder='搜索您想要的企业名称、产品等'></input>
-      <icon type='search' size="14" class='index-search-icon'></icon>
+      <text class='icon-search index-search-icon'></text>
     </view>
   </view>
   <view class='index-menu-wrapper'>

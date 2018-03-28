@@ -22,7 +22,9 @@ page{
 .search-icon{
   position: absolute;
   left:34rpx;
-  top:24rpx;
+  top:20rpx;
+  font-size: 28rpx;
+  color: #505050;
 }
 .search-keyword{
   background: #f5f5f5;

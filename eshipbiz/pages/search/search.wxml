@@ -2,8 +2,8 @@
 <view class='container'>
   <view class='search-top'>
     <view class='search-top-left'>
-      <icon type='search' size="14" class='search-icon'></icon>
-      <input type='text' bindinput='keywordInput' placeholder='搜索您想要的企业名称、产品等' class='search-keyword' placeholder-class='search-keyword-placeholder'></input>
+      <text class='icon-search search-icon'></text>
+      <input type='text' bindinput='keywordInput' placeholder='搜索您想要的企业名称、产品等' class='search-keyword' placeholder-class='search-keyword-placeholder' auto-focus='true'></input>
     </view>
     <view class="search-top-right">
       <button bindtap='searchEnterprise' class='search-button'>搜 索</button>
