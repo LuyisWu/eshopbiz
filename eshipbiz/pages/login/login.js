@@ -75,8 +75,8 @@ Page({
           wx.setStorageSync('account', result.account);
           wx.setStorageSync('enterprise', result.enterprise);
           wx.setStorageSync('loginStatus', true);
-          wx.switchTab({
-            url: '/pages/account/account',
+          wx.navigateBack({
+            delta: 1
           })
         }else{
           var msg = res.data.msg || "";

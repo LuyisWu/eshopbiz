@@ -113,12 +113,10 @@ Page({
     })
   },
   menuNav:function(e){
-    if (e.currentTarget.dataset.url){
-      wx.navigateTo({
-        url: e.currentTarget.dataset.url,
-      })
-    }else{
-      wx.showToast({title:"功能暂未开放",icon:"none"});
-    }
+    var name = e.currentTarget.dataset.name;
+    app.globalData.enterpriseKeywords = name;
+    wx.switchTab({
+      url: "/pages/supplier/supplier"
+    })
   }
 })

@@ -20,7 +20,7 @@
           <text class='forget-password-icon {{isLookClass}}' bindtap='seePassword'></text>
         </view>
       </view>
-      <button class='forget-button' bindtap='forgetAction' disabled='{{disabled}}'>提  交</button>
+      <button class='forget-button' bindtap='forgetAction' disabled='{{disabled}}'>重置密码</button>
     </form>
   </view>
 </view>

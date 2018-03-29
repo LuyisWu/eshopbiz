@@ -20,8 +20,8 @@
   <view class='index-menu-wrapper'>
     <view class='index-menu'>
       <block wx:for="{{menuList}}" wx:key="id" wx:for-item="menuItem">
-        <view class='index-menu-item'>
-          <view bindtap='menuNav' data-url="{{menuList.url}}">
+        <view class='index-menu-item' bindtap='menuNav' data-url="{{menuList.url}}" data-name="{{menuItem.name}}">
+          <view>
             <image src="{{menuItem.path}}" class='index-menu-item-image'></image>
           </view> 
           <text class='index-menu-item-title'>{{menuItem.name}}</text>

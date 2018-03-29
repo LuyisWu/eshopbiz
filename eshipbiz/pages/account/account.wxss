@@ -41,6 +41,8 @@ page{
   height: 90rpx;
   line-height: 90rpx;
   margin-top:4rpx;
+  display: flex;
+  background: #fff;
 }
 .action-bottom-item{
   margin-top: 18rpx;
@@ -91,13 +93,11 @@ page{
   align-items: flex-start;
   justify-content: center;
   height: 130rpx;
+  line-height: 130rpx;
 }
 .account-login{
   font-size: 30rpx;
   padding-right: 40rpx;
-  
-  line-height: 130rpx;
-  height:130rpx;
 }
 .account-line{
   height: 30rpx;
@@ -108,6 +108,4 @@ page{
 .account-sign{
   font-size: 30rpx;
   padding-left: 40rpx;
-  line-height: 130rpx;
-  height:130rpx;
 }

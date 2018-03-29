@@ -25,13 +25,13 @@ Page({
     }
   },
   navToRes:function(e){
-    var url = e.target.dataset.url;
+    var url = e.currentTarget.dataset.url;
     wx.navigateTo({
       url: url
     })
   },
   certCheckNav:function(e){
-    var url = e.target.dataset.url;
+    var url = e.currentTarget.dataset.url;
     if(this.data.loginStatus){
       if (this.data.hasCert =="0") {
         wx.navigateTo({
@@ -49,7 +49,7 @@ Page({
     }
   },
   loginCheckNav:function(e){
-    var url = e.target.dataset.url;
+    var url = e.currentTarget.dataset.url;
     // 判断是否登录
     if(app.globalData.loginStatus){
         wx.navigateTo({
@@ -62,7 +62,7 @@ Page({
     }
   },
   eshopCheckNav: function (e) {
-    var url = e.target.dataset.url;
+    var url = e.currentTarget.dataset.url;
     // 判断是否登录
     if (app.globalData.loginStatus) {
       if (this.data.hasCert =="2") {

@@ -17,7 +17,7 @@
     </form>
   </view>
   <view class='login-nav-wrapper'>
-    <navigator url="/pages/forget/forget" open-type="redirect" class='login-nav login-left'>忘记密码？</navigator>
-    <navigator url="/pages/sign/sign" open-type="redirect" class='login-nav login-right'>注册账户</navigator>
+    <navigator url="/pages/forget/forget" open-type="navigate" class='login-nav login-left'>忘记密码？</navigator>
+    <navigator url="/pages/sign/sign" open-type="navigate" class='login-nav login-right'>注册账户</navigator>
   </view>
 </view>

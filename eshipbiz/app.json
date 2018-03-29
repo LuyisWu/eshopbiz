@@ -9,17 +9,19 @@
     "pages/sign/sign",
     "pages/forget/forget",
     "pages/mysupplier/mysupplier",
-    "pages/cert/cert",
-    "pages/eshop/eshop",
-    "pages/info/info",
     "pages/mybusiness/mybusiness",
+    "pages/cert/cert",
+    "pages/info/info",
     "pages/editinfo/name/name",
     "pages/editinfo/job/job",
     "pages/editinfo/partment/partment",
     "pages/editinfo/phone/phone",
     "pages/agreement/agreement",
     "pages/certres/certres",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/eshop/homepage/homepage",
+    "pages/eshop/products/products",
+    "pages/eshop/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",

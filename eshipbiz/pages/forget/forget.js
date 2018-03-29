@@ -154,13 +154,8 @@ Page({
           wx.showToast({
             title: "修改密码成功"
           })
-          const result = res.data.data;
-          app.globalData.account = result;
-          app.globalData.loginStatus = true;
-          wx.setStorageSync('account', result);
-          wx.setStorageSync('loginStatus', true);
-          wx.switchTab({
-            url: '/pages/account/account',
+          wx.navigateBack({
+            delta: 1
           })
         } else {
           const msg = res.data.msg || "";
