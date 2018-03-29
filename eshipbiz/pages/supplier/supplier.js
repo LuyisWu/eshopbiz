@@ -91,12 +91,10 @@ Page({
   saveFilter: function(){
     var self =this;
     var model = self.data.currentModel;
-    var modelName = self.data.currentMdodelName;
+    var modelName = self.data.currentModelName;
     var category = self.data.currentCategory;
     var categoryName =self.data.currentCategoryName;
     self.setData({
-      page: 1,
-      pageSize: 10,
       enterpriseKeywords: categoryName,
       managementModelName: modelName,
       targetModel: model,
