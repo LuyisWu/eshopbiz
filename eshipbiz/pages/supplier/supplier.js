@@ -13,10 +13,7 @@ Page({
     enterpriseList:[],
     total:0,
     hideBottom: true,
-    loadMoreData: "加载更多",
-    hideHeader: true,
     scrollHeight:0,
-    refreshMsg:"刷新中",
     open: false,
     modelList:[],
     currentModel:0,
@@ -140,15 +137,10 @@ Page({
   },
   refresh: function(e){
     var self = this;
-    self.setData({
-      refreshMsg: "刷新中",
-      hideHeader: false
-    });
+    wx.showNavigationBarLoading();
     setTimeout(function () {
       self.setData({
-        page: 1,
-        refreshMsg: "刷新中",
-        hideHeader: true
+        page: 1
       })
       self.getData();
     }, 300);
@@ -158,22 +150,21 @@ Page({
     var currentpage = self.data.page;
     var total = self.data.total;
     var size = self.data.pageSize;
+    wx.showNavigationBarLoading();
     if (currentpage == Math.ceil(total / size)) {
       self.setData({
-        loadMoreData: '已经到顶',
+        loadMoreData: '无更多数据',
         hideBottom: false
       })
+      wx.hideNavigationBarLoading();
       setTimeout(function () {
         self.setData({
           hideBottom: true
         })
-      },300)
+      },1000)
       return;
     }
-    self.setData({
-      loadMoreData: '加载更多',
-      hideBottom: false
-    })
+  wx.showNavigationBarLoading();
     if (currentpage < Math.ceil(total / size)) {
       setTimeout(function () {
         self.setData({
@@ -187,7 +178,7 @@ Page({
   toEshop: function(e){
     var eid = e.currentTarget.dataset.eid;
     var exhid = e.currentTarget.dataset.exhid;
-    wx.redirectTo({
+    wx.navigateTo({
       url: '/pages/eshop/homepage/homepage?eid=' + eid + "&exhid=" + exhid
     })
   },
@@ -231,7 +222,30 @@ Page({
             });
           }
         }
+        wx.hideNavigationBarLoading();
       }
     })
+  },
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function (res) {
+    var self = this;
+    return {
+      title: "供应商",
+      path: '/pages/index/index',
+      success: function (res) {
+        wx.showToast({
+          title: '转发成功'
+        })
+      },
+      fail: function (res) {
+        // 转发失败
+        wx.showToast({
+          title: '转发失败',
+          icon: "none"
+        })
+      }
+    }
   }
 })

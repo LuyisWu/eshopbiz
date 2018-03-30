@@ -118,5 +118,27 @@ Page({
     wx.switchTab({
       url: "/pages/supplier/supplier"
     })
+  },
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function (res) {
+    var self = this;
+    return {
+      title: "海舶士船舶服务",
+      path: '/pages/index/index',
+      success: function (res) {
+        wx.showToast({
+          title: '转发成功'
+        })
+      },
+      fail: function (res) {
+        // 转发失败
+        wx.showToast({
+          title: '转发失败',
+          icon: "none"
+        })
+      }
+    }
   }
 })

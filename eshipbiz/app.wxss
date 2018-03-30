@@ -114,3 +114,39 @@
   font-size: 30rpx;
   text-align: center;
 }
+
+.need-login{
+  width: 100%;
+  margin:30rpx 20rpx;
+  font-size:24rpx;
+  color:#7d7d7d;
+  line-height: 30rpx;
+}
+.need-login-icon{
+  font-size: 28rpx;
+  line-height: 30rpx;
+  padding-right: 20rpx;
+}
+.need-login-button{
+  margin:30rpx 20rpx 0;
+  padding-bottom: 30rpx;
+}
+.need-login-login{
+  background: #fabf1b;
+  height: 90rpx;
+  line-height: 90rpx;
+  display: inline-block;
+  width: 48%;
+  margin-right: 2%;
+}
+.need-login-sign{
+  background: #fff;
+  height: 90rpx;
+  line-height: 90rpx;
+  display: inline-block;
+  width: 48%;
+  margin-left: 2%;
+}
+.general{
+  color: #fabf1b;
+}

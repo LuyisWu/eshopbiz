@@ -99,3 +99,6 @@ page{
 .cert-success-bottom{
   background: #fff;
 }
+.cert-info-item{
+  vertical-align:top;
+}

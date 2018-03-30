@@ -12,11 +12,7 @@ Page({
     enterpriseList: [],
     total: 0,
     hideBottom: true,
-    loadMoreData: "加载更多",
-    hideHeader: true,
     scrollHeight: 0,
-    refreshMsg: "刷新中",
-
   },
   /**
    * 生命周期函数--监听页面加载
@@ -47,15 +43,10 @@ Page({
   },
   refresh: function (e) {
     var self = this;
-    self.setData({
-      refreshMsg: "刷新中",
-      hideHeader: false
-    });
+    wx.showNavigationBarLoading();
     setTimeout(function () {
       self.setData({
-        page: 1,
-        refreshMsg: "刷新中",
-        hideHeader: true
+        page: 1
       })
       self.getData();
     }, 300);
@@ -65,6 +56,7 @@ Page({
     var currentpage = self.data.page;
     var total = self.data.total;
     var size = self.data.pageSize;
+    wx.showNavigationBarLoading();
     if (currentpage == Math.ceil(total / size)) {
       self.setData({
         loadMoreData: '已经到底,无更多数据',
@@ -74,7 +66,8 @@ Page({
         self.setData({
           hideBottom: true
         })
-      }, 300)
+        wx.hideNavigationBarLoading();
+      }, 1000)
       return;
     }
     self.setData({
@@ -140,6 +133,7 @@ Page({
             });
           }
         }
+        wx.hideNavigationBarLoading();
       }
     })
   }

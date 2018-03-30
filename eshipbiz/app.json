@@ -21,7 +21,11 @@
     "pages/search/search",
     "pages/eshop/homepage/homepage",
     "pages/eshop/products/products",
-    "pages/eshop/detail/detail"
+    "pages/eshop/detail/detail",
+    "pages/eshop/cert/cert",
+    "pages/eshop/enter/enter",
+    "pages/inquirydetail/inquirydetail",
+    "pages/myinquiry/myinquiry"
   ],
   "window": {
     "backgroundTextStyle": "light",
