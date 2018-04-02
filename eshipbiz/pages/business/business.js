@@ -162,7 +162,6 @@ Page({
             });
           }
         }
-        console.log(showInquiry);
         wx.hideNavigationBarLoading();
       }
     })

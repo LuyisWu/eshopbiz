@@ -1,4 +1,3 @@
-<!--pages/mybusiness/mybusiness.wxml-->
 <!--pages/business/business.wxml-->
 <view class='business-top'>
   <view class='business-top-left'>

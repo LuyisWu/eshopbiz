@@ -1,5 +1,4 @@
 <!--pages/mysupplier/mysupplier.wxml-->
-<!--pages/supplier/supplier.wxml-->
 <view class='supplier-top'>
   <view class='supplier-top-left'>
     <text class='icon-search supplier-icon'></text>
