@@ -9,6 +9,7 @@
     <text class='icon-co-option supplier-button-icon'></text>
   </view>
 </view>
+<block wx:if="{{enterpriseList.length>0}}">
 <scroll-view scroll-y="true" bindscrolltolower="showMoreEnterprise" bindscrolltoupper="refresh" upper-threshold="50" lower-threshold="50" class='supplier-list' style='height:{{scrollHeight}}px'>
   <block wx:for="{{enterpriseList}}" wx:key="" wx:for-item="eItem">
     <view class='supplier-item' bindtap='toEshop' data-eid="{{eItem.enterpriseId}}" data-exhid="{{eItem.ent_exh_id}}">
@@ -52,6 +53,10 @@
     </view>
   </block>
 </scroll-view>
+</block>
+<block wx:else>
+  <view class='no-item'>未匹配到相关供应商</view>
+</block>
 <view class="supplier-load-bottom" hidden="{{hideBottom}}">
   <view class='load-bottom-title'>{{loadMoreData}}</view>
 </view>

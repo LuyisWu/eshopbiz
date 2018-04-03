@@ -56,7 +56,8 @@ Page({
       path: "/images/menu/menu-10.png"
     }
     ],
-    inquery:{title:"中速船用柴油发动机/九缸"}
+    inquiryList:[],
+    supplierList:[]
   },
   onLoad: function () {
     var that = this;
@@ -93,9 +94,48 @@ Page({
       url: app.globalData.domains.mallHomeDomain + '/wechat/banner',
       success: function(res){
         var r = res.data;
+        var supplierList = [];
         if(r.status == 200){
+          
+          r.data.forEach(function(item,index){
+              if(item.type ==8){
+                supplierList.push(item);
+              }
+          })
           that.setData({
-            bannerList: r.data
+            bannerList: r.data,
+            supplierList: supplierList
+          });
+        }
+      }
+    });
+    wx.request({
+      url: app.globalData.domains.mallHomeDomain + '/wechat/inquirysheet',
+      data:{
+        page: 1,
+        pageSize: 6
+      },
+      success: function (res) {
+        var r = res.data;
+        if (r.status == 200) {
+          var list = r.data;
+          var now =new Date();
+          list.forEach(function (item, index) {
+            var endTime = item.inquiryEndTime;
+            var diffTime = endTime - now;
+            if (diffTime > 0) {
+              var days = Math.floor(diffTime / (24 * 3600 * 1000));
+              var leave1 = diffTime % (24 * 3600 * 1000);
+              var hours = Math.floor(leave1 / (3600 * 1000));
+              list[index].days = days;
+              list[index].hours = hours;
+            } else {
+              list[index].days = "";
+              list[index].hours = "";
+            }
+          })
+          that.setData({
+            inquiryList: list
           })
         }
       }
@@ -117,6 +157,30 @@ Page({
     app.globalData.enterpriseKeywords = name;
     wx.switchTab({
       url: "/pages/supplier/supplier"
+    })
+  },
+  inquiryNav: function(e){
+    var id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: '/pages/inquirydetail/inquirydetail?id='+id,
+    })
+  },
+  inquiryListNav: function(){
+    wx.switchTab({
+      url: '/pages/business/business',
+    })
+  },
+  financeNav: function(e){
+    var id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: '/pages/finance/finance?id='+id
+    })
+  },
+  supplierNav: function(e){
+    var url = e.currentTarget.dataset.url;
+    console.log(url);
+    wx.navigateTo({
+      url: url
     })
   },
   /**

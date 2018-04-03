@@ -1,2 +1,20 @@
 <!--pages/message/message.wxml-->
-<text>pages/message/message.wxml</text>
+<view class='message-wrapper'>
+  <block wx:if="{{messageList.length>0}}">
+    <block wx:for="{{messageList}}" wx:key="" wx:for-item="eItem">
+      <view class='message-item' bindtap='toMsgDetail' data-mid="{{eItem.messageId}}">
+        <view class='m-top'>
+          <block wx:if="{{eItem.readFlag == 0}}"><text class='read-flag'></text></block>{{eItem.messageTitle}}
+        </view>
+        <view class='m-middle'>
+          <view class='m-middle-left'>消息来源：<text class='general'>海舶士</text></view>
+          <view class='m-middle-right'>{{eItem.sendMsgTime}}</view>
+        </view>
+        <view class='m-bottom'>{{eItem.messageContent}}</view>
+      </view>
+    </block>
+  </block>
+  <block wx:else>
+    <view class='no-messgae'>暂无消息</view>
+  </block>
+</view>

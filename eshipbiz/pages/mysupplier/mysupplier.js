@@ -8,8 +8,7 @@ Page({
   data: {
     page: 1,
     pageSize: 10,
-    Keyword: "",
-    enterpriseList: [],
+    messageList: [],
     total: 0,
     hideBottom: true,
     scrollHeight: 0,
@@ -115,6 +114,7 @@ Page({
               hideHeader: false,
               enterpriseList: []
             });
+            wx.hideNavigationBarLoading();
             return;
           }
           if (pageIndex == 1) {

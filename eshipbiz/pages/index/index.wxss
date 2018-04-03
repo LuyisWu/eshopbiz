@@ -1,4 +1,7 @@
 /**index.wxss**/
+page{
+  background: #f5f5f5;
+}
 .banner{
   width: 100%;
   text-align: center;
@@ -29,7 +32,7 @@
   z-index: 12;
 }
 .index-menu-wrapper{
-  margin: 0 10rpx;
+  background: #fff;
 }
 .index-menu{
   width: 100%;
@@ -52,9 +55,291 @@
   line-height: 1;
 }
 .index-inquery{
+  background: #fff;
+  width: 100%;
+  margin-top: 20rpx;
+}
+.index-inquiry-top{
+  position: relative;
+  padding: 56rpx 20rpx 30rpx;
+}
+.index-brage{
+  position: absolute;
+  top: -10rpx;
+  left: 0;
+  font-size: 30rpx;
+  line-height: 48rpx;
+  border-radius: 0 0 24rpx 0;
+  width: 160rpx;
+  height: 48rpx;
+  color: #fff;
+  background: -webkit-linear-gradient(left,#f49d4f, #fa7013);
+  background: -o-linear-gradient(left,#f49d4f, #fa7013);
+  background: -moz-linear-gradient(left,#f49d4f, #fa7013);
+  background: linear-gradient(to left,#f49d4f, #fa7013);
+}
+.brage-title{
+  padding-left: 20rpx;
+}
+.inquery-category{
+  background: #505050;
+  color: #fff;
+  font-size: 24rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  text-align: center;
+  padding: 0 15rpx;
+  border-radius: 4rpx;
+}
+.inquiry-fisrt-middle{
+  margin-bottom: 40rpx;
+}
+.inquiry-fisrt-bottom{
+  color: #7d7d7d;
+  font-size: 24rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.inquiry-num{
+  padding-right: 20rpx;
+}
+.index-inquiry-middle{
+  padding: 20rpx 20rpx 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.i-left{
+  width: 37%;
+  height: 346rpx;
   background: #f0f0f0;
+  line-height: 346rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #000;
+}
+.inquiry-second-title{
+  line-height: 1;
+  height:28rpx;
+  overflow:hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:1;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  padding-top:160rpx;
+}
+.i-right{
+  width: 60%;
+}
+.inquiry-third{
+  height: 150rpx;
+  background: red;
+}
+.inquiry-third-title{
+  line-height: 1;
+  height:28rpx;
+  overflow:hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:1;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  padding-top:50rpx;
+  font-size: 28rpx;
+  text-align: center;
+}
+.inquiry-third-category{
+  text-align: center;
+  margin-bottom: 18rpx;
+}
+.inquiry-forth{
+  display: flex;
+  margin-top: 32rpx;
+}
+.inquiry-forth-category{
+  background: #fff;
+  color: #505050;
+  font-size: 24rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  text-align: center;
+  padding: 0 15rpx;
+  border-radius: 4rpx;
+  border: 1px solid #505050;
+  justify-content: flex-start;
+  width: 100rpx;
+}
+.inquiry-forth-content{
+  padding-left: 20rpx;
+  justify-content: flex-start;
+  line-height: 28rpx;
+  height:28rpx;
+  overflow:hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:1;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  font-size: 24rpx;
+}
+.index-inquiry-bottom{
+  border-top: 1px solid #dcdcdc;
+  line-height: 100rpx;
+  height: 100rpx;
+  text-align: center;
+  color:#7d7d7d;
+  margin: 0 20rpx;
+  font-size: 28rpx;
+}
+.i-bottom-icon{
+  margin-left: 20rpx;
+  width: 40rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  background: #7d7d7d;
+  color: #fff;
+  font-size: 20rpx;
+  padding-top: 10rpx;
+}
+.index-finance{
+  margin-top: 20rpx;
+  position: relative;
   width: 100%;
 }
-.index-tips-title{
-
+.index-finance-content{
+  display: flex;
+}
+.index-finance-left{
+  width: 33%;
+  height: 440rpx;
+  background: blue;
+  border-right: 4rpx solid #fff;
+}
+.index-finance-right{
+  width: 67%;
+  background: red;
+}
+.index-finance-top{
+  height: 218rpx;
+  border-bottom: 4rpx solid #fff;
+}
+.index-finance-bottom{
+  height: 218rpx;
+}
+.index-finance-contact{
+  padding: 30rpx 20rpx 0;
+  background: #fff;
+}
+.index-contact-title{
+  font-size: 24rpx;
+  color:#000;
+}
+.index-contact-content{
+  font-size: 24rpx;
+  color: #7d7d7d;
+  padding-top: 20rpx;
+  padding-bottom: 64rpx;
+}
+.inquiry-supplier{
+  position: relative;
+  width: 100%;
+  margin-top: 20rpx;
+}
+.index-supplier-brage{
+  position: absolute;
+  top: -10rpx;
+  left: 0;
+  font-size: 30rpx;
+  line-height: 48rpx;
+  border-radius: 0 0 24rpx 0;
+  width: 160rpx;
+  height: 48rpx;
+  color: #fff;
+  background: -webkit-linear-gradient(right,#6e50fa, #13b0fa);
+  background: -o-linear-gradient(right,#6e50fa, #13b0fa);
+  background: -moz-linear-gradient(right,#6e50fa, #13b0fa);
+  background: linear-gradient(to right,#6e50fa, #13b0fa);
+}
+.index-supplier-content{
+  display: flex;
+  flex-wrap: wrap;
+}
+.index-supplier-1{
+  width: 100%;
+  height: 240rpx;
+  justify-content: flex-start;
+  border-left: 2rpx solid #fff;
+  border-bottom: 2rpx solid #fff;
+}
+.index-supplier-2{
+  border-left: 0;
+}
+.index-supplier-bg{
+  width: 33%;
+  height: 200rpx;
+  background-size: 100% 100%;
+  border-left: 2rpx solid #fff;
+  border-bottom: 2rpx solid #fff;
+}
+.inquiry-chat{
+  position: relative;
+  width: 100%;
+  margin-top: 20rpx;
+  height: 350rpx;
+  background: yellow;
+}
+.index-chat-brage{
+  position: absolute;
+  top: -10rpx;
+  left: 0;
+  font-size: 30rpx;
+  line-height: 48rpx;
+  border-radius: 0 0 24rpx 0;
+  width: 160rpx;
+  height: 48rpx;
+  color: #fff;
+  background: -webkit-linear-gradient(right,#13befa, #13fae2);
+  background: -o-linear-gradient(right,#13befa, #13fae2);
+  background: -moz-linear-gradient(right,#13befa, #13fae2);
+  background: linear-gradient(to right,#13befa, #13fae2);
+}
+.index-bottom{
+  margin-top: 20rpx;
+  padding-top: 40rpx;
+  width: 100%;
+}
+.index-bottom-top{
+  display: flex;
+  width: 100%;
+  font-size: 24rpx;
+  color: #7d7d7d;
+  justify-content: space-between;
+  padding-bottom:20rpx;
+}
+.index-bottom-left{
+  justify-content: flex-start;
+  padding-left: 40rpx;
+}
+.index-bottom-right{
+  justify-content: flex-end;
+  padding-right: 40rpx;
+}
+.index-bottom-logo{
+  width:285rpx;
+  height:216rpx;
+}
+.dark{
+  color: #000;
+}
+.index-bottom-bottom{
+  line-height: 94rpx;
+  height: 94rpx;
+  color: #7d7d7d;
+  text-align: center;
+  margin: 0 20rpx;
+  border-top: 1px solid #dcdcdc;
+  font-size: 24rpx;
+}
+.index-bottom-content{
+  padding: 20rpx 0 40rpx;
 }

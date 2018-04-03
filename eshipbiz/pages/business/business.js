@@ -114,6 +114,7 @@ Page({
               hideHeader: false,
               inquiryList: []
             });
+            wx.hideNavigationBarLoading();
             return;
           }
           if (pageIndex == 1) {

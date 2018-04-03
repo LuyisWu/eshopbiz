@@ -1,1 +1,24 @@
 /* pages/agreement/agreement.wxss */
+.agree-content{
+  font-size: 24rpx;
+  line-height: 38rpx;
+  padding: 0 20rpx 120rpx;
+}
+.bold-title{
+   font-weight: bold;
+   font-size: 24rpx;
+   line-height: 30rpx;
+   color: #000;
+   margin-top: 40rpx;
+}
+.agree-fix-button{
+  position: fixed;
+  width: 100%;
+  line-height: 100rpx;
+  text-align: center;
+  height: 100rpx;
+  background: #fabf1b;
+  font-size: 30rpx;
+  color: #000;
+  bottom: 0;
+}

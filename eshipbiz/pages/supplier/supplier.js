@@ -204,6 +204,7 @@ Page({
               hideHeader: false,
               enterpriseList:[]
             });
+            wx.hideNavigationBarLoading();
             return;
           }
           if (pageIndex == 1){

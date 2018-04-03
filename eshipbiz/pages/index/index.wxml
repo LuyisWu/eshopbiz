@@ -29,8 +29,99 @@
       </block>
     </view>
   </view>
-  <view class='index-inquery'>
-    <view class=''></view>
-    <view>{{inquery.title}}</view>
+  <block wx:if="{{inquiryList.length>0}}">
+    <view class='index-inquery'>
+      <view class='index-inquiry-top' data-id="{{inquiryList[0].inquiryId}}" bindtap='inquiryNav'>
+        <view class='index-brage'><text class='brage-title'>最新询价</text></view>
+        <view class='index-inquiry-first'>
+          <view class='inquiry-first-title'>{{inquiryList[0].inquiryTitle}}</view>
+          <view class='inquiry-fisrt-middle'><text class='inquery-category'>{{inquiryList[0].equipmentClassificationName}}</text></view>
+          <view class='inquiry-fisrt-bottom'>
+            <view class='inquiry-time'>
+            <block wx:if="{{inquiryList[0].days !='' && inquiryList[0].hours!=''}}">
+            截止日期<text class='general'> {{inquiryList[0].days}}</text> 天<text class='general'> {{inquiryList[0].hours}} </text>小时</block><block wx:else>已截止</block>
+            </view>
+            <view class='inquiry-num'>已报价<text class='general'> {{inquiryList[0].quotationsNumber}} </text>条</view>
+          </view>
+        </view>
+      </view>
+      <view class='index-inquiry-middle'>
+          <view class='i-left' data-id="{{inquiryList[1].inquiryId}}" bindtap='inquiryNav'>
+            <view class='inquiry-second-title'>{{inquiryList[1].inquiryTitle}}</view>
+          </view>
+          <view class='i-right'>
+            <view class='inquiry-third' data-id="{{inquiryList[2].inquiryId}}" bindtap='inquiryNav'>
+              <view class='inquiry-third-title'>{{inquiryList[2].inquiryTitle}}</view>
+              <view class='inquiry-third-category'>
+                <text class='inquery-category'>{{inquiryList[2].equipmentClassificationName}}</text>
+              </view>
+            </view>
+            <block wx:if="{{inquiryList[3]}}">
+            <view class='inquiry-forth' data-id="{{inquiryList[3].inquiryId}}" bindtap='inquiryNav'>
+              <text class='inquiry-forth-category'>{{inquiryList[3].equipmentClassificationName}}</text>
+              <view class='inquiry-forth-content'>{{inquiryList[3].inquiryTitle}}</view>
+            </view>
+            </block>
+            <block wx:if="{{inquiryList[4]}}">
+            <view class='inquiry-forth' data-id="{{inquiryList[4].inquiryId}}" bindtap='inquiryNav'>
+              <text class='inquiry-forth-category'>{{inquiryList[4].equipmentClassificationName}}</text>
+              <view class='inquiry-forth-content'>{{inquiryList[4].inquiryTitle}}</view>
+            </view>
+            </block>
+            <block wx:if="{{inquiryList[5]}}">
+            <view class='inquiry-forth' data-id="{{inquiryList[5].inquiryId}}" bindtap='inquiryNav'>
+              <text class='inquiry-forth-category'>{{inquiryList[5].equipmentClassificationName}}</text>
+              <view class='inquiry-forth-content'>{{inquiryList[5].inquiryTitle}}</view>
+            </view>
+            </block>
+          </view>
+      </view>
+      <view class='index-inquiry-bottom' bindtap='inquiryListNav'>查看更多<text class='icon-Arrow i-bottom-icon'></text></view>
+    </view>
+  </block>
+  <view class='index-finance'>
+    <view class='index-brage'><text class='brage-title'>金融服务</text></view>
+    <view class='index-finance-content'>
+      <view class='index-finance-left' bindtap='financeNav' data-id="1">
+          
+      </view>
+      <view class='index-finance-right'>
+        <view class='index-finance-top' bindtap='financeNav' data-id="2"></view>
+        <view class='index-finance-bottom' bindtap='financeNav' data-id="3"></view>
+      </view>
+    </view>
+    <view class='index-finance-contact'>
+      <view class='index-contact-title'>海舶士金融</view>
+      <view class='index-contact-content'>欢迎致电咨询，客服热线：400-828-9936</view>
+    </view>
+  </view>
+  <view class='inquiry-supplier'>
+    <view class='index-supplier-brage'><text class='brage-title'>优质企业</text></view>
+    <view class='index-supplier-content'>
+      <view class='index-supplier-1' bindtap="supplierNav" data-url='{{supplierList[0].buttonUrl}}' style='background-image:url({{supplierList[0].pic}})'></view>
+      <view class='index-supplier-2 index-supplier-bg' bindtap="supplierNav" data-url='{{supplierList[1].buttonUrl}}' style='background-image:url({{supplierList[1].pic}})'></view>
+      <view class='index-supplier-3 index-supplier-bg' bindtap="supplierNav" data-url='{{supplierList[2].buttonUrl}}' style='background-image:url({{supplierList[2].pic}})'></view>
+      <view class='index-supplier-4 index-supplier-bg' bindtap="supplierNav" data-url='{{supplierList[3].buttonUrl}}' style='background-image:url({{supplierList[3].pic}})'></view>
+      <view class='index-supplier-5 index-supplier-bg' bindtap="supplierNav" data-url='{{supplierList[4].buttonUrl}}' style='background-image:url({{supplierList[4].pic}})'></view>
+      <view class='index-supplier-6 index-supplier-bg' bindtap="supplierNav" data-url='{{supplierList[5].buttonUrl}}' style='background-image:url({{supplierList[5].pic}})'></view>
+      <view class='index-supplier-7 index-supplier-bg index-supplier-last' bindtap="supplierNav" data-url='{{supplierList[6].buttonUrl}}' style='background-image:url({{supplierList[6].pic}})'></view>
+    </view>
+  </view>
+  <view class='inquiry-chat'>
+    <view class='index-chat-brage'><text class='brage-title'>聊天软件</text></view>
+  </view>
+  <view class='index-bottom'>
+    <view class='index-bottom-top'>
+      <view class='index-bottom-left'>
+        <view>服务热线：</view>
+        <view class='dark index-bottom-content'>400-828-9936</view>
+        <view>工作时间：</view>
+        <view class='dark index-bottom-content'>周一至周五 9:00 - 18:00</view>
+      </view>
+      <view class='index-bottom-right'>
+        <image src='/images/logo.png' class='index-bottom-logo'></image>
+      </view>
+    </view>
+    <view class='index-bottom-bottom'>云浮信息技术（上海）有限公司 版权所有</view>
   </view>
 </view>

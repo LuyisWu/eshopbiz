@@ -24,7 +24,9 @@
     "pages/eshop/detail/detail",
     "pages/eshop/cert/cert",
     "pages/eshop/enter/enter",
-    "pages/inquirydetail/inquirydetail"
+    "pages/inquirydetail/inquirydetail",
+    "pages/mdetail/mdetail",
+    "pages/finance/finance"
   ],
   "window": {
     "backgroundTextStyle": "light",

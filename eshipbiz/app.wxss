@@ -163,3 +163,11 @@
 .general{
   color: #fabf1b;
 }
+.no-item{
+  padding-top: 300rpx;
+  text-align: center;
+  font-size: 32rpx;
+  line-height: 32rpx;
+  color: #7d7d7d;
+  width: 100%;
+}
