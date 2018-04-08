@@ -1,12 +1,12 @@
 <!--index.wxml-->
 <view class='container'>
   <view class='banner-wrapper relative' style='width: 100%'>
-    <swiper interval='5000' indicator-active-color='#ffff' indicator-color='#1888c8' indicator-dots='true' circular="true" circular='true'>
+    <swiper interval='3000' indicator-active-color='#ffff' indicator-color='#1888c8' indicator-dots='true' circular="true" circular='true' autoplay="{{true}}">
     <block wx:for="{{bannerList}}" wx:key="">
       <block wx:if="{{item.type ==6}}">
         <swiper-item>
           <view class='relative'>
-            <image src='{{item.pic}}' style='width: 100%'></image>
+            <image src='{{item.pic}}' style='width: 100%;height:300rpx;' mode='aspectFit'></image>
           </view>
         </swiper-item>
       </block>
@@ -31,7 +31,7 @@
   </view>
   <block wx:if="{{inquiryList.length>0}}">
     <view class='index-inquery'>
-      <view class='index-inquiry-top' data-id="{{inquiryList[0].inquiryId}}" bindtap='inquiryNav'>
+      <view class='index-inquiry-top' data-id="{{inquiryList[0].inquiryId}}" bindtap='inquiryNav' style='background-image:url(/images/index/inquiry-1.png)'>
         <view class='index-brage'><text class='brage-title'>最新询价</text></view>
         <view class='index-inquiry-first'>
           <view class='inquiry-first-title'>{{inquiryList[0].inquiryTitle}}</view>
@@ -46,11 +46,14 @@
         </view>
       </view>
       <view class='index-inquiry-middle'>
-          <view class='i-left' data-id="{{inquiryList[1].inquiryId}}" bindtap='inquiryNav'>
+          <view class='i-left' data-id="{{inquiryList[1].inquiryId}}" bindtap='inquiryNav' style='background-image:url(/images/index/inquiry-2.png)'>
             <view class='inquiry-second-title'>{{inquiryList[1].inquiryTitle}}</view>
+            <view class='inquiry-second-category'>
+                <text class='inquery-category'>{{inquiryList[1].equipmentClassificationName}}</text>
+              </view>
           </view>
           <view class='i-right'>
-            <view class='inquiry-third' data-id="{{inquiryList[2].inquiryId}}" bindtap='inquiryNav'>
+            <view class='inquiry-third' data-id="{{inquiryList[2].inquiryId}}" bindtap='inquiryNav' style='background-image:url(/images/index/inquiry-3.png)'>
               <view class='inquiry-third-title'>{{inquiryList[2].inquiryTitle}}</view>
               <view class='inquiry-third-category'>
                 <text class='inquery-category'>{{inquiryList[2].equipmentClassificationName}}</text>
@@ -82,12 +85,10 @@
   <view class='index-finance'>
     <view class='index-brage'><text class='brage-title'>金融服务</text></view>
     <view class='index-finance-content'>
-      <view class='index-finance-left' bindtap='financeNav' data-id="1">
-          
-      </view>
+      <view class='index-finance-left' bindtap='financeNav' data-id="1" style='background-image:url(/images/index/finance-1.png)'></view>
       <view class='index-finance-right'>
-        <view class='index-finance-top' bindtap='financeNav' data-id="2"></view>
-        <view class='index-finance-bottom' bindtap='financeNav' data-id="3"></view>
+        <view class='index-finance-top' bindtap='financeNav' data-id="2" style='background-image:url(/images/index/finance-2.png)'></view>
+        <view class='index-finance-bottom' bindtap='financeNav' data-id="3" style='background-image:url(/images/index/finance-3.png)'></view>
       </view>
     </view>
     <view class='index-finance-contact'>
@@ -98,18 +99,18 @@
   <view class='inquiry-supplier'>
     <view class='index-supplier-brage'><text class='brage-title'>优质企业</text></view>
     <view class='index-supplier-content'>
-      <view class='index-supplier-1' bindtap="supplierNav" data-url='{{supplierList[0].buttonUrl}}' style='background-image:url({{supplierList[0].pic}})'></view>
-      <view class='index-supplier-2 index-supplier-bg' bindtap="supplierNav" data-url='{{supplierList[1].buttonUrl}}' style='background-image:url({{supplierList[1].pic}})'></view>
-      <view class='index-supplier-3 index-supplier-bg' bindtap="supplierNav" data-url='{{supplierList[2].buttonUrl}}' style='background-image:url({{supplierList[2].pic}})'></view>
-      <view class='index-supplier-4 index-supplier-bg' bindtap="supplierNav" data-url='{{supplierList[3].buttonUrl}}' style='background-image:url({{supplierList[3].pic}})'></view>
-      <view class='index-supplier-5 index-supplier-bg' bindtap="supplierNav" data-url='{{supplierList[4].buttonUrl}}' style='background-image:url({{supplierList[4].pic}})'></view>
-      <view class='index-supplier-6 index-supplier-bg' bindtap="supplierNav" data-url='{{supplierList[5].buttonUrl}}' style='background-image:url({{supplierList[5].pic}})'></view>
-      <view class='index-supplier-7 index-supplier-bg index-supplier-last' bindtap="supplierNav" data-url='{{supplierList[6].buttonUrl}}' style='background-image:url({{supplierList[6].pic}})'></view>
+      <view class='index-supplier-1' bindtap="supplierNav" data-url='{{supplierList[0].buttonUrl}}' style='background-image:url({{supplierList[0].pic}})'><view class='supplier-title'>{{supplierList[0].title}}</view><view class='supplier-subtitle'>{{supplierList[0].subtitle}}</view></view>
+      <view class='index-supplier-2 index-supplier-bg' bindtap="supplierNav" data-url='{{supplierList[1].buttonUrl}}' style='background-image:url({{supplierList[1].pic}})'><view class='supplier-title'>{{supplierList[1].title}}</view><view class='supplier-subtitle'>{{supplierList[1].subtitle}}</view></view>
+      <view class='index-supplier-3 index-supplier-bg' bindtap="supplierNav" data-url='{{supplierList[2].buttonUrl}}' style='background-image:url({{supplierList[2].pic}})'><view class='supplier-title'>{{supplierList[2].title}}</view><view class='supplier-subtitle'>{{supplierList[2].subtitle}}</view></view>
+      <view class='index-supplier-4 index-supplier-bg' bindtap="supplierNav" data-url='{{supplierList[3].buttonUrl}}' style='background-image:url({{supplierList[3].pic}})'><view class='supplier-title'>{{supplierList[3].title}}</view><view class='supplier-subtitle'>{{supplierList[3].subtitle}}</view></view>
+      <view class='index-supplier-5 index-supplier-second' bindtap="supplierNav" data-url='{{supplierList[4].buttonUrl}}'><view class='supplier-second-title'>{{supplierList[4].title}}</view><view class='supplier-second-subtitle'>{{supplierList[4].subtitle}}</view></view>
+      <view class='index-supplier-6 index-supplier-second' bindtap="supplierNav" data-url='{{supplierList[5].buttonUrl}}'><view class='supplier-second-title'>{{supplierList[5].title}}</view><view class='supplier-second-subtitle'>{{supplierList[5].subtitle}}</view></view>
+      <view class='index-supplier-7 index-supplier-second index-supplier-last' bindtap="supplierNav" data-url='{{supplierList[6].buttonUrl}}' ><view class='supplier-second-title'>{{supplierList[6].title}}</view><view class='supplier-second-subtitle'>{{supplierList[6].subtitle}}</view></view>
     </view>
   </view>
-  <view class='inquiry-chat'>
+  <!-- <view class='inquiry-chat'>
     <view class='index-chat-brage'><text class='brage-title'>聊天软件</text></view>
-  </view>
+  </view> -->
   <view class='index-bottom'>
     <view class='index-bottom-top'>
       <view class='index-bottom-left'>
@@ -119,7 +120,7 @@
         <view class='dark index-bottom-content'>周一至周五 9:00 - 18:00</view>
       </view>
       <view class='index-bottom-right'>
-        <image src='/images/logo.png' class='index-bottom-logo'></image>
+        <image src='/images/index-logo.png' class='index-bottom-logo'></image>
       </view>
     </view>
     <view class='index-bottom-bottom'>云浮信息技术（上海）有限公司 版权所有</view>

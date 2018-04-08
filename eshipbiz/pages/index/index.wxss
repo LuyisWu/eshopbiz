@@ -22,6 +22,7 @@ page{
   font-size: 30rpx;
   line-height: 40rpx;
   z-index: 11;
+  opacity:0.8;
 }
 .index-search-icon{
   position: absolute;
@@ -61,7 +62,23 @@ page{
 }
 .index-inquiry-top{
   position: relative;
-  padding: 56rpx 20rpx 30rpx;
+  padding:0 20rpx 10rpx 30rpx;
+  background-size: cover;
+  height: 240rpx;
+}
+.inquiry-first-title{
+  color: #fff;
+  font-size: 30rpx;
+  line-height: 1;
+  height:30rpx;
+  overflow:hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:1;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  margin-bottom:8rpx;
+  padding-top:70rpx;
 }
 .index-brage{
   position: absolute;
@@ -82,8 +99,8 @@ page{
   padding-left: 20rpx;
 }
 .inquery-category{
-  background: #505050;
-  color: #fff;
+  background: #fabf1b;
+  color: #000;
   font-size: 24rpx;
   height: 28rpx;
   line-height: 28rpx;
@@ -95,7 +112,7 @@ page{
   margin-bottom: 40rpx;
 }
 .inquiry-fisrt-bottom{
-  color: #7d7d7d;
+  color: #fff;
   font-size: 24rpx;
   display: flex;
   justify-content: space-between;
@@ -111,33 +128,35 @@ page{
 .i-left{
   width: 37%;
   height: 346rpx;
-  background: #f0f0f0;
-  line-height: 346rpx;
   text-align: center;
-  font-size: 28rpx;
-  color: #000;
+  font-size: 30rpx;
+  color: #fff;
+  background-size: cover;
 }
 .inquiry-second-title{
-  line-height: 1;
-  height:28rpx;
+  line-height: 1.5;
+  height:90rpx;
   overflow:hidden;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp:1;
+  -webkit-line-clamp:2;
   display: -webkit-box;
   word-break: break-all;
   text-overflow: ellipsis;
-  padding-top:160rpx;
+  padding-top:120rpx;
+  width: 220rpx;
+  margin:0 auto;
 }
 .i-right{
   width: 60%;
 }
 .inquiry-third{
   height: 150rpx;
-  background: red;
+  background-size: cover;
 }
 .inquiry-third-title{
+  color: #fff;
   line-height: 1;
-  height:28rpx;
+  height:30rpx;
   overflow:hidden;
   -webkit-box-orient: vertical;
   -webkit-line-clamp:1;
@@ -145,7 +164,7 @@ page{
   word-break: break-all;
   text-overflow: ellipsis;
   padding-top:50rpx;
-  font-size: 28rpx;
+  font-size: 30rpx;
   text-align: center;
 }
 .inquiry-third-category{
@@ -212,8 +231,8 @@ page{
 .index-finance-left{
   width: 33%;
   height: 440rpx;
-  background: blue;
   border-right: 4rpx solid #fff;
+  background-size: cover;
 }
 .index-finance-right{
   width: 67%;
@@ -222,9 +241,11 @@ page{
 .index-finance-top{
   height: 218rpx;
   border-bottom: 4rpx solid #fff;
+  background-size: cover;
 }
 .index-finance-bottom{
   height: 218rpx;
+  background-size: cover;
 }
 .index-finance-contact{
   padding: 30rpx 20rpx 0;
@@ -244,6 +265,7 @@ page{
   position: relative;
   width: 100%;
   margin-top: 20rpx;
+  
 }
 .index-supplier-brage{
   position: absolute;
@@ -270,6 +292,7 @@ page{
   justify-content: flex-start;
   border-left: 2rpx solid #fff;
   border-bottom: 2rpx solid #fff;
+  background-size:cover;
 }
 .index-supplier-2{
   border-left: 0;
@@ -307,6 +330,7 @@ page{
   margin-top: 20rpx;
   padding-top: 40rpx;
   width: 100%;
+  background: #fff;
 }
 .index-bottom-top{
   display: flex;
@@ -325,8 +349,8 @@ page{
   padding-right: 40rpx;
 }
 .index-bottom-logo{
-  width:285rpx;
-  height:216rpx;
+  width:155rpx;
+  height:171rpx;
 }
 .dark{
   color: #000;
@@ -341,5 +365,62 @@ page{
   font-size: 24rpx;
 }
 .index-bottom-content{
-  padding: 20rpx 0 40rpx;
+  padding: 10rpx 0 24rpx;
+}
+.supplier-title{
+  font-size: 30rpx;
+  color: #fabf1b;
+  margin: 100rpx 20rpx 0;
+  line-height: 1;
+  height:30rpx;
+  overflow:hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:1;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+}
+.supplier-subtitle{
+  font-size: 24rpx;
+  color: #fff;
+  margin: 20rpx 20rpx 0;
+  line-height: 1;
+  height:24rpx;
+  overflow:hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:1;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+}
+.index-supplier-second{
+  width: 33%;
+  padding: 30rpx 0 50rpx;
+  background: #fff;
+}
+.supplier-second-title{
+  font-size: 30rpx;
+  color: #000;
+  margin: 0 20rpx;
+  line-height: 1;
+  height:30rpx;
+  overflow:hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:1;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+}
+.supplier-second-subtitle{
+  font-size: 24rpx;
+  color: #7d7d7d;
+  margin: 20rpx 20rpx 0;
+  line-height: 1;
+  height:24rpx;
+  overflow:hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:1;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
 }
