@@ -1,6 +1,6 @@
 <!--pages/login/login.wxml-->
 <view class='container'>
-  <view class='text-center'><image src="/images/logo.png" class='top-logo'></image></view>
+  <view class='text-center'><image src="/images/index-logo.png" class='top-logo'></image></view>
   <view class='login-form'>
     <form id='loginForm'>
       <view>

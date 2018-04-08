@@ -64,7 +64,7 @@ page{
 }
 .action-link{
   width: 100%;
-  font-size: 36rpx;
+  font-size: 30rpx;
   display: flex;
   background: #fff;
   justify-content: space-between;

@@ -39,8 +39,8 @@
 }
 .top-logo{
   margin-top: 80rpx;
-  width: 285rpx;
-  height: 216rpx;
+  width:155rpx;
+  height:171rpx;
   margin-bottom: 36rpx;
 }
 .login-icon-wrapper{

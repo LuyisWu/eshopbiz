@@ -164,7 +164,6 @@ Page({
       },1000)
       return;
     }
-  wx.showNavigationBarLoading();
     if (currentpage < Math.ceil(total / size)) {
       setTimeout(function () {
         self.setData({

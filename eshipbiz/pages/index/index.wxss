@@ -236,7 +236,6 @@ page{
 }
 .index-finance-right{
   width: 67%;
-  background: red;
 }
 .index-finance-top{
   height: 218rpx;

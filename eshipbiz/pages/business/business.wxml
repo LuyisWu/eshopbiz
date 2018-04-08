@@ -5,7 +5,7 @@
     <input type='text' placeholder='搜索您想要的询价单' class='business-keyword' value="{{keyword}}" bindinput='keywordsInput'></input>
   </view>
   <view class="business-top-right" bindtap='search'>
-    <text class="business-filter-button" style='background:{{Keyword!=""?"#fabf1b":"#fff"}}'>搜索</text>
+    <text class="business-filter-button" style='background:{{Keyword!=""?"#fabf1b":"#fff"}};border: 1rpx solid {{Keyword!=""?"#fabf1b":"#dcdcdc"}}'>搜索</text>
   </view>
 </view>
 <block wx:if="{{inquiryList.length>0}}">
