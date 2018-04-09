@@ -187,6 +187,12 @@ page{
   border: 1px solid #505050;
   justify-content: flex-start;
   width: 100rpx;
+  overflow:hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:1;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
 }
 .inquiry-forth-content{
   padding-left: 20rpx;

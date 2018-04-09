@@ -141,8 +141,8 @@
   padding-right: 20rpx;
 }
 .need-login-button{
-  margin:30rpx 20rpx 0;
   padding-bottom: 30rpx;
+  display: flex;
 }
 .need-login-login{
   background: #fabf1b;
@@ -150,7 +150,7 @@
   line-height: 90rpx;
   display: inline-block;
   width: 48%;
-  margin-right: 2%;
+  justify-content: flex-start;
 }
 .need-login-sign{
   background: #fff;
@@ -158,7 +158,7 @@
   line-height: 90rpx;
   display: inline-block;
   width: 48%;
-  margin-left: 2%;
+  justify-content: flex-end;
 }
 .general{
   color: #fabf1b;

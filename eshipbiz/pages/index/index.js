@@ -90,6 +90,7 @@ Page({
   },
   onShow: function(){
     var that =this;
+    console.log(app.globalData.domains.mallHomeDomain);
     wx.request({
       url: app.globalData.domains.mallHomeDomain + '/wechat/banner',
       success: function(res){
