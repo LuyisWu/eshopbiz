@@ -27,6 +27,7 @@
   position: absolute;
   left: 20rpx;
   top: 32rpx;
+  font-size:36rpx;
 }
 .sign-icon-wrapper{
   position: absolute;

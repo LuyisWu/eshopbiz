@@ -166,6 +166,7 @@ page{
   padding-top:50rpx;
   font-size: 30rpx;
   text-align: center;
+  margin:0 20rpx;
 }
 .inquiry-third-category{
   text-align: center;
@@ -178,7 +179,7 @@ page{
 .inquiry-forth-category{
   background: #fff;
   color: #505050;
-  font-size: 24rpx;
+  font-size: 20rpx;
   height: 28rpx;
   line-height: 28rpx;
   text-align: center;
@@ -342,7 +343,6 @@ page{
   width: 100%;
   font-size: 24rpx;
   color: #7d7d7d;
-  justify-content: space-between;
   padding-bottom:20rpx;
 }
 .index-bottom-left{
@@ -350,8 +350,8 @@ page{
   padding-left: 40rpx;
 }
 .index-bottom-right{
-  justify-content: flex-end;
-  padding-right: 40rpx;
+  justify-content: flex-start;
+  padding-left: 60rpx;
 }
 .index-bottom-logo{
   width:155rpx;

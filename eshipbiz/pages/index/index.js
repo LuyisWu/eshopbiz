@@ -1,6 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp()
+var account = wx.getStorageSync('account')
 Page({
   data: {
     bannerList:[],
@@ -84,6 +85,34 @@ Page({
             userInfo: res.userInfo,
             hasUserInfo: true
           })
+        }
+      })
+    }
+    wx.request({
+      url: app.globalData.host + "/rest/lp/common/getProjectInfo",
+      success: res => {
+        if (res.data.status == 200) {
+          app.globalData.domains = res.data.data;
+        }
+      }
+    });
+    if (account != "" && account != null) {
+      wx.request({
+        url: app.globalData.host + '/rest/lp/account/getUserInfo',
+        data: {
+          userToken: account.accountId,
+          verificationToken: account.token
+        },
+        success: res => {
+          var result = res.data.data;
+          app.globalData.account = result.account;
+          app.globalData.enterprise = result.enterprise;
+          app.globalData.enterpriseExhSign = result.enterpriseExhSign;
+          app.globalData.loginStatus = true;
+          wx.setStorageSync('account', result.account);
+          wx.setStorageSync('enterpriseExhSign', result.enterpriseExhSign);
+          wx.setStorageSync('enterprise', result.enterprise.enterprise);
+          wx.setStorageSync('loginStatus', true);
         }
       })
     }

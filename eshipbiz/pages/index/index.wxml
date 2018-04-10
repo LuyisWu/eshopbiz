@@ -116,11 +116,10 @@
       <view class='index-bottom-left'>
         <view>服务热线：</view>
         <view class='dark index-bottom-content'>400-828-9936</view>
-        <view>工作时间：</view>
-        <view class='dark index-bottom-content'>周一至周五 9:00 - 18:00</view>
       </view>
       <view class='index-bottom-right'>
-        <image src='/images/index-logo.png' class='index-bottom-logo'></image>
+        <view>工作时间：</view>
+        <view class='dark index-bottom-content'>周一至周五 9:00 - 18:00</view>
       </view>
     </view>
     <view class='index-bottom-bottom'>云浮信息技术（上海）有限公司 版权所有</view>
